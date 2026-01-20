@@ -1,150 +1,202 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="container">
-        <h1 class="display-4 fw-bold">AI-Powered Beekeeping Intelligence</h1>
-        <p class="lead">Transform raw environmental and hive data into practical decisions</p>
-        <a href="#features" class="btn btn-primary btn-lg mt-3">Explore Features</a>
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Algomind Hive Dashboard</h1>
+        <a href="#" class="btn btn-primary">
+            <i class="fas fa-download"></i> Generate Report
+        </a>
     </div>
-</section>
 
-<!-- Stats Section -->
-<section class="stats-section">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-3 col-6">
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <p>Prediction Accuracy</p>
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-center bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Total Hives</h5>
+                    <h3 class="display-4">24</h3>
+                    <p><small>Managed</small></p>
                 </div>
             </div>
-            <div class="col-md-3 col-6">
-                <div class="stat-item">
-                    <span class="stat-number">40%</span>
-                    <p>Reduction in Colony Losses</p>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Active Hives</h5>
+                    <h3 class="display-4">22</h3>
+                    <p><small>Currently Active</small></p>
                 </div>
             </div>
-            <div class="col-md-3 col-6">
-                <div class="stat-item">
-                    <span class="stat-number">25%</span>
-                    <p>Increase in Yield</p>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Yield Prediction</h5>
+                    <h3 class="display-4">280kg</h3>
+                    <p><small>Total Expected</small></p>
                 </div>
             </div>
-            <div class="col-md-3 col-6">
-                <div class="stat-item">
-                    <span class="stat-number">10k+</span>
-                    <p>Hives Monitored</p>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center bg-warning text-dark">
+                <div class="card-body">
+                    <h5 class="card-title">Absconding Risk</h5>
+                    <h3 class="display-4">Low</h3>
+                    <p><small>Overall Risk</small></p>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Features Section -->
-<section id="features" class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Intelligent Beekeeping Solutions</h2>
-            <p class="lead">Our AI-powered system helps you make data-driven decisions</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="feature-card card h-100 p-4">
-                    <div class="text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-cloud-sun"></i>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Climate Summary</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-temperature-high fa-2x text-primary mb-2"></i>
+                                <h5>22°C</h5>
+                                <small>Avg Temperature</small>
+                            </div>
                         </div>
-                        <h3>Climate Intelligence</h3>
-                        <p class="text-muted">Anticipate environmental conditions that affect bee activity and nectar availability</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i> Short-term climate forecasts</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Nectar flow probability</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Stress indicators</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-card card h-100 p-4">
-                    <div class="text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-bee"></i>
+                        <div class="col-md-3 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-tint fa-2x text-info mb-2"></i>
+                                <h5>65%</h5>
+                                <small>Humidity</small>
+                            </div>
                         </div>
-                        <h3>Bee Colony Intelligence</h3>
-                        <p class="text-muted">Detect colony health trends and behavioral risks</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i> Health status monitoring</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Absconding risk assessment</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Swarming probability</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-card card h-100 p-4">
-                    <div class="text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
+                        <div class="col-md-3 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-cloud-rain fa-2x text-success mb-2"></i>
+                                <h5>12mm</h5>
+                                <small>Rainfall</small>
+                            </div>
                         </div>
-                        <h3>Market Intelligence</h3>
-                        <p class="text-muted">Support profitable selling decisions</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i> Price trend forecasting</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Hold vs sell recommendations</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Optimal timing</li>
-                        </ul>
+                        <div class="col-md-3 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-seedling fa-2x text-warning mb-2"></i>
+                                <h5>78%</h5>
+                                <small>Nectar Flow</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- Dashboard Preview Section -->
-<section id="dashboard" class="py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Smart Dashboard</h2>
-            <p class="lead">Real-time insights and actionable recommendations</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="hive-card card p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4><i class="fas fa-home me-2"></i>Hive Activity</h4>
-                        <span class="badge bg-primary">Live</span>
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Hive Health Overview</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Hive ID</th>
+                                    <th>Health Status</th>
+                                    <th>Yield Est.</th>
+                                    <th>Next Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HIVE-001</td>
+                                    <td><span class="badge bg-success">Healthy</span></td>
+                                    <td>12.5kg</td>
+                                    <td>Monitor</td>
+                                </tr>
+                                <tr>
+                                    <td>HIVE-002</td>
+                                    <td><span class="badge bg-success">Healthy</span></td>
+                                    <td>11.2kg</td>
+                                    <td>Harvest in 3 days</td>
+                                </tr>
+                                <tr>
+                                    <td>HIVE-003</td>
+                                    <td><span class="badge bg-warning">Monitor</span></td>
+                                    <td>8.7kg</td>
+                                    <td>Check for swarming</td>
+                                </tr>
+                                <tr>
+                                    <td>HIVE-004</td>
+                                    <td><span class="badge bg-danger">Attention</span></td>
+                                    <td>6.3kg</td>
+                                    <td>Immediate inspection</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <p>Monitor real-time hive conditions including weight, temperature, and activity levels.</p>
-                    <div class="progress mb-2" style="height: 10px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"></div>
-                    </div>
-                    <small class="text-muted">Foraging Activity: 75%</small>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="prediction-card card p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4><i class="fas fa-brain me-2"></i>AI Prediction</h4>
-                        <span class="badge bg-warning text-dark">Today</span>
-                    </div>
-                    <p>Nectar flow probability: <strong>82%</strong> - Optimal conditions expected tomorrow morning.</p>
-                    <div class="alert alert-info">
-                        <i class="fas fa-lightbulb me-2"></i> Recommendation: Prepare for increased foraging activity
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-</section>
 
-<!-- CTA Section -->
-<section class="py-5 bg-dark text-white">
-    <div class="container text-center">
-        <h2 class="fw-bold mb-3">Ready to Transform Your Beekeeping?</h2>
-        <p class="lead mb-4">Join thousands of beekeepers using AI to optimize their operations</p>
-        <a href="/admin/" class="btn btn-primary btn-lg">Get Started</a>
+        <div class="col-lg-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Risk Indicators</h6>
+                </div>
+                <div class="card-body">
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 15%">Low Risk</div>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 25%">Medium Risk</div>
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 10%">High Risk</div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Healthy Hives
+                            <span class="badge badge-success badge-pill">18</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Monitor Required
+                            <span class="badge badge-warning badge-pill">4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Immediate Action
+                            <span class="badge badge-danger badge-pill">2</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Recent Alerts</h6>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Optimal Foraging Conditions</h5>
+                                <small class="text-muted">Today</small>
+                            </div>
+                            <p class="mb-1">Nectar flow probability is at 82%. Expect increased activity in the morning.</p>
+                            <small class="text-success">Priority: High</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Monitor Colony Stress</h5>
+                                <small class="text-muted">2 hours ago</small>
+                            </div>
+                            <p class="mb-1">Temperature readings indicate potential stress. Consider providing shade.</p>
+                            <small class="text-warning">Priority: Medium</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Harvest Window Opening</h5>
+                                <small class="text-muted">Yesterday</small>
+                            </div>
+                            <p class="mb-1">Harvest window opens tomorrow. Expected yield: 12.5kg</p>
+                            <small class="text-success">Priority: High</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 {% endblock %}
