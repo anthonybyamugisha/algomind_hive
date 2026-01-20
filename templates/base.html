@@ -23,7 +23,6 @@
         .navbar {
             background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
         }
         
         .hero-section {
@@ -246,7 +245,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-2 text-white" href="{% url 'home' %}">
+            <a class="navbar-brand fw-bold fs-3 text-white" href="{% url 'home' %}">
                 <i class="fas fa-honeycomb me-2"></i> ALGOMIND ORGANIC HONEY
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -255,25 +254,25 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white {% if request.resolver_match.url_name == 'home' %}active fw-bold{% endif %}" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'home' %}active fw-bold{% endif %}" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white {% if request.resolver_match.url_name == 'dashboard' %}active fw-bold{% endif %}" href="{% url 'dashboard' %}">Dashboard</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'dashboard' %}active fw-bold{% endif %}" href="{% url 'dashboard' %}">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white {% if request.resolver_match.url_name == 'hive-observation' %}active fw-bold{% endif %}" href="{% url 'hive-observation' %}">Hive Observation</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'hive-observation' %}active fw-bold{% endif %}" href="{% url 'hive-observation' %}">Hive Observation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white {% if request.resolver_match.url_name == 'climate-environment' %}active fw-bold{% endif %}" href="{% url 'climate-environment' %}">Climate Data</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'climate-environment' %}active fw-bold{% endif %}" href="{% url 'climate-environment' %}">Climate Data</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white {% if request.resolver_match.url_name == 'predictions-recommendations' %}active fw-bold{% endif %}" href="{% url 'predictions-recommendations' %}">AI Predictions</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'predictions-recommendations' %}active fw-bold{% endif %}" href="{% url 'predictions-recommendations' %}">AI Predictions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white {% if request.resolver_match.url_name == 'market-price' %}active fw-bold{% endif %}" href="{% url 'market-price' %}">Market Price</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'market-price' %}active fw-bold{% endif %}" href="{% url 'market-price' %}">Market Price</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white" href="/admin/">Admin</a>
+                        <a class="nav-link text-white" href="/admin/">Admin</a>
                     </li>
                 </ul>
             </div>
