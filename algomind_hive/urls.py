@@ -32,6 +32,7 @@ urlpatterns = [
     path('market-price/', views.ai_predictions, name='market-price'),
     path('login/', views.login_view, name='login'),
     path('register/', views.register_view, name='register'),
+    path('forgot-password/', views.forgot_password_view, name='forgot-password'),
     path('admin/', admin.site.urls),
     path('api/climate/', include('climate.urls')),
     path('api/hives/', include('hives.urls')),
