@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Algomind Hive - AI-Powered Beekeeping{% endblock %}</title>
+    <title>{% block title %}ALGOMIND ORGANIC HONEY - AI-Powered Beekeeping{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -243,10 +243,10 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-3" href="{% url 'home' %}">
-                <i class="fas fa-honeycomb"></i> Algomind Hive
+            <a class="navbar-brand fw-bold fs-3 text-white" href="{% url 'home' %}">
+                <i class="fas fa-honeycomb me-2"></i> ALGOMIND ORGANIC HONEY
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -254,25 +254,25 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'home' %}active fw-bold{% endif %}" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'dashboard' %}active fw-bold{% endif %}" href="{% url 'dashboard' %}">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'hive-observation' %}">Hive Observation</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'hive-observation' %}active fw-bold{% endif %}" href="{% url 'hive-observation' %}">Hive Observation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'climate-environment' %}">Climate & Environment</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'climate-environment' %}active fw-bold{% endif %}" href="{% url 'climate-environment' %}">Climate & Environment</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'predictions-recommendations' %}">Predictions & Recommendations</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'predictions-recommendations' %}active fw-bold{% endif %}" href="{% url 'predictions-recommendations' %}">Predictions & Recommendations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'market-price' %}">Market & Price</a>
+                        <a class="nav-link text-white {% if request.resolver_match.url_name == 'market-price' %}active fw-bold{% endif %}" href="{% url 'market-price' %}">Market & Price</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/">Admin</a>
+                        <a class="nav-link text-white" href="/admin/">Admin</a>
                     </li>
                 </ul>
             </div>
@@ -286,7 +286,7 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="mb-4">ALGOMIND</h5>
+                    <h5 class="mb-4">ALGOMIND ORGANIC HONEY</h5>
                     <p class="mb-4">Smarter Beekeeping, Smarter Profits</p>
                     <div class="social-icons">
                         <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
@@ -332,7 +332,7 @@
                         <li class="mb-2"><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
                     </ul>
                     <div class="mt-4">
-                        <p class="mb-0">&copy; 2026 ALGOMIND. All rights reserved.</p>
+                        <p class="mb-0">&copy; 2026 ALGOMIND ORGANIC HONEY. All rights reserved.</p>
                     </div>
                 </div>
             </div>
