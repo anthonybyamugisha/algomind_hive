@@ -39,3 +39,6 @@ def ai_predictions(request):
 
 def login_view(request):
     return render(request, 'registration/login.html')
+
+def register_view(request):
+    return render(request, 'registration/register.html')
