@@ -16,10 +16,17 @@
                 </div>
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
-                <!-- Placeholder for illustration -->
-                <div class="d-flex justify-content-center">
-                    <div class="bg-light rounded p-4" style="width: 100%; max-width: 400px; height: 300px; display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-honeycomb fa-5x text-warning opacity-50"></i>
+                <!-- Honeycomb pattern background with illustration -->
+                <div class="position-relative">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden rounded-3">
+                        <div class="honeycomb-pattern position-absolute top-0 start-0 w-100 h-100 opacity-10"></div>
+                    </div>
+                    <div class="position-relative bg-light rounded-3 p-5" style="height: 350px; display: flex; align-items: center; justify-content: center;">
+                        <div class="text-center">
+                            <i class="fas fa-hive fa-4x text-warning mb-3"></i>
+                            <i class="fas fa-brain fa-4x text-success mb-3 d-block"></i>
+                            <i class="fas fa-chart-network fa-4x text-primary mb-3 d-block"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -28,47 +35,47 @@
 </section>
 
 <!-- Key Features Section -->
-<section id="features" class="py-5">
+<section id="features" class="py-5" style="background: linear-gradient(135deg, var(--accent-color), #f0e6d2);">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Key Features</h2>
-            <p class="lead">Discover how Algomind transforms beekeeping with AI</p>
+            <h2 class="fw-bold text-dark">Key Features</h2>
+            <p class="lead text-dark">Discover how Algomind transforms beekeeping with AI</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card card h-100 p-4 text-center">
-                    <div class="feature-icon mx-auto mb-3">
-                        <i class="fas fa-microchip"></i>
+                <div class="feature-card card h-100 p-4 text-center border-0 shadow-sm" style="background: rgba(255, 255, 255, 0.8);">
+                    <div class="feature-icon mx-auto mb-3 text-warning">
+                        <i class="fas fa-microchip fa-2x"></i>
                     </div>
-                    <h5>AI Hive Monitoring</h5>
-                    <p>Track hive health and growth in real-time.</p>
+                    <h5 class="text-dark">AI Hive Monitoring</h5>
+                    <p class="text-dark">Track hive health and growth in real-time.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card card h-100 p-4 text-center">
-                    <div class="feature-icon mx-auto mb-3">
-                        <i class="fas fa-chart-line"></i>
+                <div class="feature-card card h-100 p-4 text-center border-0 shadow-sm" style="background: rgba(255, 255, 255, 0.8);">
+                    <div class="feature-icon mx-auto mb-3 text-success">
+                        <i class="fas fa-chart-line fa-2x"></i>
                     </div>
-                    <h5>Predictive Analytics</h5>
-                    <p>Forecast honey yields and colony risks before they happen.</p>
+                    <h5 class="text-dark">Predictive Analytics</h5>
+                    <p class="text-dark">Forecast honey yields and colony risks before they happen.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card card h-100 p-4 text-center">
-                    <div class="feature-icon mx-auto mb-3">
-                        <i class="fas fa-cloud-sun"></i>
+                <div class="feature-card card h-100 p-4 text-center border-0 shadow-sm" style="background: rgba(255, 255, 255, 0.8);">
+                    <div class="feature-icon mx-auto mb-3 text-info">
+                        <i class="fas fa-cloud-sun fa-2x"></i>
                     </div>
-                    <h5>Climate Insights</h5>
-                    <p>Plan ahead with weather and nectar flow predictions.</p>
+                    <h5 class="text-dark">Climate Insights</h5>
+                    <p class="text-dark">Plan ahead with weather and nectar flow predictions.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card card h-100 p-4 text-center">
-                    <div class="feature-icon mx-auto mb-3">
-                        <i class="fas fa-money-bill-wave"></i>
+                <div class="feature-card card h-100 p-4 text-center border-0 shadow-sm" style="background: rgba(255, 255, 255, 0.8);">
+                    <div class="feature-icon mx-auto mb-3 text-gold">
+                        <i class="fas fa-money-bill-wave fa-2x"></i>
                     </div>
-                    <h5>Market Intelligence</h5>
-                    <p>Maximize profits with price predictions.</p>
+                    <h5 class="text-dark">Market Intelligence</h5>
+                    <p class="text-dark">Maximize profits with price predictions.</p>
                 </div>
             </div>
         </div>
@@ -76,54 +83,54 @@
 </section>
 
 <!-- How It Works Section -->
-<section class="py-5 bg-light">
+<section class="py-5" style="background: linear-gradient(135deg, #f8f5f0, var(--light-color));">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">How Algomind Works</h2>
-            <p class="lead">Simple steps to smarter beekeeping</p>
+            <h2 class="fw-bold text-dark">How Algomind Works</h2>
+            <p class="lead text-dark">Simple steps to smarter beekeeping</p>
         </div>
         <div class="row g-4">
             <div class="col-md-3 text-center">
-                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">1</div>
-                <h5>Collect Data</h5>
-                <p>Add hive observations or import sensor data.</p>
+                <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">1</div>
+                <h5 class="text-dark">Collect Data</h5>
+                <p class="text-dark">Add hive observations or import sensor data.</p>
             </div>
             <div class="col-md-3 text-center">
-                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">2</div>
-                <h5>AI Analysis</h5>
-                <p>Algomind predicts hive behavior, risks, and yields.</p>
+                <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">2</div>
+                <h5 class="text-dark">AI Analysis</h5>
+                <p class="text-dark">Algomind predicts hive behavior, risks, and yields.</p>
             </div>
             <div class="col-md-3 text-center">
-                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">3</div>
-                <h5>Recommendations</h5>
-                <p>Get actionable advice tailored to your hives.</p>
+                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">3</div>
+                <h5 class="text-dark">Recommendations</h5>
+                <p class="text-dark">Get actionable advice tailored to your hives.</p>
             </div>
             <div class="col-md-3 text-center">
-                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">4</div>
-                <h5>Monitor & Grow</h5>
-                <p>Track performance and improve results.</p>
+                <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">4</div>
+                <h5 class="text-dark">Monitor & Grow</h5>
+                <p class="text-dark">Track performance and improve results.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Testimonials Section -->
-<section class="py-5">
+<section class="py-5" style="background: linear-gradient(135deg, var(--light-color), #f0e6d2);">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">What Beekeepers Say</h2>
-            <p class="lead">Join successful beekeepers using Algomind</p>
+            <h2 class="fw-bold text-dark">What Beekeepers Say</h2>
+            <p class="lead text-dark">Join successful beekeepers using Algomind</p>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="card border-0 shadow">
+                <div class="card border-0 shadow-lg rounded-4" style="background: rgba(255, 255, 255, 0.9);">
                     <div class="card-body p-5 text-center">
                         <i class="fas fa-quote-left fa-2x text-warning mb-4"></i>
                         <blockquote class="mb-4">
-                            <p class="fs-5">"Algomind helped me reduce hive losses by 30% last season!"</p>
+                            <p class="fs-5 text-dark">"Algomind helped me reduce hive losses by 30% last season!"</p>
                         </blockquote>
                         <footer class="blockquote-footer">
-                            <strong>John K., Ugandan Beekeeper</strong>
+                            <strong class="text-dark">John K., Ugandan Beekeeper</strong>
                         </footer>
                     </div>
                 </div>
@@ -133,11 +140,46 @@
 </section>
 
 <!-- Final CTA Section -->
-<section class="py-5 bg-primary text-white">
+<section class="py-5" style="background: linear-gradient(135deg, var(--primary-color), #c9a32c);">
     <div class="container text-center">
-        <h2 class="display-5 fw-bold mb-3">Ready to Transform Your Beekeeping?</h2>
-        <p class="lead mb-4">Join thousands of beekeepers using AI to optimize their operations</p>
-        <a href="#" class="btn btn-light btn-lg px-5 py-3">Sign Up Now</a>
+        <h2 class="display-5 fw-bold mb-3 text-white">Ready to Transform Your Beekeeping?</h2>
+        <p class="lead mb-4 text-white">Join thousands of beekeepers using AI to optimize their operations</p>
+        <a href="#" class="btn btn-light btn-lg px-5 py-3 rounded-pill" style="font-weight: bold; letter-spacing: 1px;">Sign Up Now</a>
     </div>
 </section>
+
+<style>
+    .honeycomb-pattern {
+        position: relative;
+    }
+    
+    .honeycomb-pattern::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(circle at 10px 10px, var(--primary-color) 2px, transparent 2px),
+            radial-gradient(circle at calc(100% - 10px) 10px, var(--primary-color) 2px, transparent 2px),
+            radial-gradient(circle at 10px calc(100% - 10px), var(--primary-color) 2px, transparent 2px),
+            radial-gradient(circle at calc(100% - 10px) calc(100% - 10px), var(--primary-color) 2px, transparent 2px);
+        background-size: 20px 20px;
+        transform: rotate(45deg);
+    }
+    
+    .text-gold {
+        color: var(--primary-color) !important;
+    }
+    
+    .feature-card {
+        transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+</style>
 {% endblock %}
