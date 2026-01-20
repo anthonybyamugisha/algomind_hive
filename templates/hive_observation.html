@@ -6,12 +6,15 @@
 <div class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Hive Observation & Data Entry</h1>
+        <button class="btn btn-primary" onclick="submitForm()">
+            <i class="fas fa-paper-plane"></i> Submit Observation
+        </button>
     </div>
 
     <div class="row">
         <div class="col-lg-8">
             <div class="card shadow mb-4">
-                <div class="card-header py-3">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Hive Data Entry Form</h6>
                 </div>
                 <div class="card-body">
@@ -123,11 +126,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button type="button" class="btn btn-secondary me-md-2" onclick="clearForm()">Clear</button>
-                            <button type="submit" class="btn btn-primary">Submit Observation</button>
-                        </div>
                     </form>
                 </div>
             </div>
@@ -135,37 +133,37 @@
 
         <div class="col-lg-4">
             <div class="card shadow mb-4">
-                <div class="card-header py-3">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Quick Tips</h6>
                 </div>
                 <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item">
                             <i class="fas fa-weight-hanging text-primary me-2"></i>
                             <strong>Weight Measurement:</strong> Weigh hives regularly to track honey production
-                        </li>
-                        <li class="list-group-item">
+                        </div>
+                        <div class="list-group-item">
                             <i class="fas fa-bee text-warning me-2"></i>
                             <strong>Foraging Activity:</strong> Observe entrance traffic during peak hours
-                        </li>
-                        <li class="list-group-item">
+                        </div>
+                        <div class="list-group-item">
                             <i class="fas fa-egg text-success me-2"></i>
                             <strong>Brood Pattern:</strong> Look for consistent egg-laying pattern
-                        </li>
-                        <li class="list-group-item">
+                        </div>
+                        <div class="list-group-item">
                             <i class="fas fa-ruler-combined text-info me-2"></i>
                             <strong>Consistency:</strong> Take measurements at same time daily
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card shadow mb-4">
-                <div class="card-header py-3">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Recent Observations</h6>
                 </div>
                 <div class="card-body">
-                    <div class="list-group">
+                    <div class="list-group list-group-flush">
                         <a href="#" class="list-group-item list-group-item-action">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">HIVE-001</h6>
@@ -200,7 +198,10 @@
 <script>
 document.getElementById('hiveObservationForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    
+    submitForm();
+});
+
+function submitForm() {
     // Collect form data
     const formData = {
         hiveId: document.getElementById('hiveId').value,
@@ -224,7 +225,7 @@ document.getElementById('hiveObservationForm').addEventListener('submit', functi
     
     // Reset form
     clearForm();
-});
+}
 
 function clearForm() {
     document.getElementById('hiveObservationForm').reset();
