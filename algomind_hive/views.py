@@ -50,3 +50,10 @@ def register_view(request):
         # Backend functionality not implemented as per requirements
         pass
     return render(request, 'registration/register.html')
+
+def forgot_password_view(request):
+    if request.method == 'POST':
+        # Just render the page again without processing forgot password
+        # Backend functionality not implemented as per requirements
+        pass
+    return render(request, 'registration/forgot_password.html')
