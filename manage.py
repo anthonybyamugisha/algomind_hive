@@ -7,7 +7,7 @@ import sys
 def main():
     """Run administrative tasks."""
     # Check if deployment settings should be used
-    if os.environ.get('DEPLOYMENT_ENV') == 'azure':
+    if os.environ.get('DEPLOYMENT_ENV') in ['azure', 'render']:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'algomind_hive.deployment_settings')
     else:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'algomind_hive.settings')
