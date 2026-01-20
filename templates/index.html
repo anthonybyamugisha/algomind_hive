@@ -5,24 +5,24 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="py-5" style="background: linear-gradient(135deg, #f5f0e1, #e5ddd0); min-height: 500px;">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6 text-center text-lg-start">
-                <h1 class="display-4 fw-bold mb-3">Smart Beekeeping, Powered by AI</h1>
-                <p class="lead mb-4">Algomind helps you monitor hives, predict yields, and optimize honey production — no guesswork, just data-driven decisions.</p>
+                <h1 class="display-4 fw-bold mb-3 text-dark">Smart Beekeeping, Powered by AI</h1>
+                <p class="lead mb-4 text-dark">Algomind helps you monitor hives, predict yields, and optimize honey production — no guesswork, just data-driven decisions.</p>
                 <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
                     <a href="#" class="btn btn-primary btn-lg px-4 py-2">Get Started</a>
-                    <a href="#features" class="btn btn-outline-light btn-lg px-4 py-2">Learn More</a>
+                    <a href="#features" class="btn btn-dark btn-lg px-4 py-2">Learn More</a>
                 </div>
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
                 <!-- Image in hero section -->
                 <div class="position-relative">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden rounded-3">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden rounded-4">
                         <div class="honeycomb-pattern position-absolute top-0 start-0 w-100 h-100 opacity-10"></div>
                     </div>
-                    <div class="position-relative bg-light rounded-3 p-1" style="height: 350px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <div class="position-relative bg-white rounded-4 shadow-lg p-2" style="height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                         <img src="{% static 'images/hello.jpeg' %}" alt="AI Beekeeping Platform" class="img-fluid rounded" style="max-width: 100%; max-height: 100%; object-fit: cover; width: auto; height: auto;">
                     </div>
                 </div>
