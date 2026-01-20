@@ -4,47 +4,47 @@
 
 {% block content %}
 <div class="container py-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1>Market & Price Intelligence</h1>
-        <button class="btn btn-primary" id="updateMarketBtn">
+    <div class="d-flex justify-content-between align-items-center mb-4 fade-in-up">
+        <h1 class="display-4 fw-bold">Market & Price Intelligence</h1>
+        <button class="btn btn-primary btn-lg px-4 py-2 btn-hover-grow" id="updateMarketBtn">
             <i class="fas fa-sync-alt"></i> Update Market Data
         </button>
     </div>
 
     <div class="row mb-4">
-        <div class="col-md-3">
-            <div class="card text-center bg-primary text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Current Price</h5>
-                    <h3 class="display-4">$8.20</h3>
-                    <p><small>per kg</small></p>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-1">
+            <div class="card text-center bg-primary text-white shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #4e73df, #2e59d9); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Current Price</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">$8.20</h3>
+                    <p class="mb-0"><small>per kg</small></p>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card text-center bg-success text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Trend</h5>
-                    <h3 class="display-4">+3.2%</h3>
-                    <p><i class="fas fa-arrow-up"></i> Up from last month</p>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-2">
+            <div class="card text-center bg-success text-white shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #1cc88a, #13855c); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Trend</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">+3.2%</h3>
+                    <p class="mb-0"><i class="fas fa-arrow-up"></i> Up from last month</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card text-center bg-info text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Forecast</h5>
-                    <h3 class="display-4">Rising</h3>
-                    <p><i class="fas fa-chart-line"></i> Next 2 weeks</p>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-3">
+            <div class="card text-center bg-info text-white shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #36b9cc, #258391); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Forecast</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">Rising</h3>
+                    <p class="mb-0"><i class="fas fa-chart-line"></i> Next 2 weeks</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card text-center bg-warning text-dark">
-                <div class="card-body">
-                    <h5 class="card-title">Best Time to Sell</h5>
-                    <h3 class="display-4">Jun 15</h3>
-                    <p><i class="fas fa-calendar-day"></i> Estimated</p>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-4">
+            <div class="card text-center bg-warning text-dark shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #f6c23e, #d6a22b); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Best Time to Sell</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">Jun 15</h3>
+                    <p class="mb-0"><i class="fas fa-calendar-day"></i> Estimated</p>
                 </div>
             </div>
         </div>
@@ -52,9 +52,9 @@
 
     <div class="row">
         <div class="col-lg-8">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Honey Price Trends</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-right delay-1">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Honey Price Trends</h6>
                 </div>
                 <div class="card-body">
                     <div class="chart-container" style="position: relative; height:400px;">
@@ -63,14 +63,14 @@
                 </div>
             </div>
 
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Regional Price Comparison</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-right delay-2">
+                <div class="card-header py-3 gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Regional Price Comparison</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
+                        <table class="table table-bordered table-hover">
+                            <thead class="table-light">
                                 <tr>
                                     <th>Region</th>
                                     <th>Current Price ($/kg)</th>
@@ -80,28 +80,28 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td>Local Market</td>
                                     <td>$8.20</td>
                                     <td>+3.2%</td>
                                     <td><span class="badge bg-success">Rising</span></td>
                                     <td><div class="progress"><div class="progress-bar bg-success" style="width: 75%">75%</div></div></td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td>Regional Market</td>
                                     <td>$7.80</td>
                                     <td>+1.8%</td>
                                     <td><span class="badge bg-success">Rising</span></td>
                                     <td><div class="progress"><div class="progress-bar bg-info" style="width: 65%">65%</div></div></td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td>National Average</td>
                                     <td>$7.50</td>
                                     <td>+2.1%</td>
                                     <td><span class="badge bg-success">Rising</span></td>
                                     <td><div class="progress"><div class="progress-bar bg-info" style="width: 60%">60%</div></div></td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td>Organic Premium</td>
                                     <td>$12.50</td>
                                     <td>+4.5%</td>
@@ -116,12 +116,12 @@
         </div>
 
         <div class="col-lg-4">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Sell vs Hold Recommendation</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-left delay-1">
+                <div class="card-header py-3 gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Sell vs Hold Recommendation</h6>
                 </div>
                 <div class="card-body">
-                    <div class="text-center mb-4">
+                    <div class="text-center mb-4 fade-in-up">
                         <div class="display-4 text-success">
                             <i class="fas fa-wallet"></i>
                         </div>
@@ -129,47 +129,47 @@
                         <p class="text-muted">Wait for optimal price</p>
                     </div>
                     
-                    <div class="progress mb-3">
+                    <div class="progress mb-3 fade-in-up delay-1">
                         <div class="progress-bar bg-success" role="progressbar" style="width: 78%">
                             Hold Confidence: 78%
                         </div>
                     </div>
                     
-                    <div class="mt-4">
+                    <div class="mt-4 fade-in-up delay-2">
                         <h6><i class="fas fa-lightbulb text-warning me-2"></i> Recommendation Details:</h6>
                         <ul class="list-unstyled mt-2">
-                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Prices expected to rise further</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Optimal selling date: June 15</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Estimated gain: +15% if waiting</li>
-                            <li class="mb-2"><i class="fas fa-clock text-info me-2"></i> Timeline: 2-3 weeks</li>
+                            <li class="mb-2 fade-in-up"><i class="fas fa-check-circle text-success me-2"></i> Prices expected to rise further</li>
+                            <li class="mb-2 fade-in-up delay-1"><i class="fas fa-check-circle text-success me-2"></i> Optimal selling date: June 15</li>
+                            <li class="mb-2 fade-in-up delay-2"><i class="fas fa-check-circle text-success me-2"></i> Estimated gain: +15% if waiting</li>
+                            <li class="mb-2 fade-in-up delay-3"><i class="fas fa-clock text-info me-2"></i> Timeline: 2-3 weeks</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Production vs Market</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-left delay-2">
+                <div class="card-header py-3 gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Production vs Market</h6>
                 </div>
                 <div class="card-body">
-                    <div class="d-flex justify-content-between mb-2">
+                    <div class="d-flex justify-content-between mb-2 fade-in-up">
                         <span>Total Production:</span>
                         <strong>280kg</strong>
                     </div>
-                    <div class="d-flex justify-content-between mb-2">
+                    <div class="d-flex justify-content-between mb-2 fade-in-up delay-1">
                         <span>Current Inventory:</span>
                         <strong>150kg</strong>
                     </div>
-                    <div class="d-flex justify-content-between mb-2">
+                    <div class="d-flex justify-content-between mb-2 fade-in-up delay-2">
                         <span>Projected Sales Value:</span>
                         <strong>$1,230</strong>
                     </div>
-                    <div class="d-flex justify-content-between mb-2">
+                    <div class="d-flex justify-content-between mb-2 fade-in-up delay-3">
                         <span>Optimized Value:</span>
                         <strong>$1,420</strong>
                     </div>
                     
-                    <div class="mt-4">
+                    <div class="mt-4 fade-in-up delay-4">
                         <h6><i class="fas fa-chart-pie text-primary me-2"></i> Revenue Projection</h6>
                         <div class="progress mb-2">
                             <div class="progress-bar bg-success" role="progressbar" style="width: 100%">Current Price</div>
@@ -182,20 +182,20 @@
                 </div>
             </div>
 
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Market Alerts</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-left delay-3">
+                <div class="card-header py-3 gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Market Alerts</h6>
                 </div>
                 <div class="card-body">
-                    <div class="alert alert-success">
+                    <div class="alert alert-success fade-in-up">
                         <i class="fas fa-arrow-up"></i> <strong>Price Increase</strong><br>
                         Honey prices rising in your region. Consider holding inventory.
                     </div>
-                    <div class="alert alert-info">
+                    <div class="alert alert-info fade-in-up delay-1">
                         <i class="fas fa-calendar"></i> <strong>Seasonal Peak</strong><br>
                         Summer months typically see highest demand for local honey.
                     </div>
-                    <div class="alert alert-warning">
+                    <div class="alert alert-warning fade-in-up delay-2">
                         <i class="fas fa-exclamation-triangle"></i> <strong>Competition</strong><br>
                         New producers entering market. Differentiate with quality.
                     </div>
@@ -206,14 +206,14 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Historical Price Data</h6>
+            <div class="card shadow mb-4 dashboard-card fade-in-up delay-3">
+                <div class="card-header py-3 gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Historical Price Data</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" width="100%" cellspacing="0">
-                            <thead>
+                        <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                            <thead class="table-light">
                                 <tr>
                                     <th>Date</th>
                                     <th>Price ($/kg)</th>
@@ -224,7 +224,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td>2023-06-15</td>
                                     <td>$8.20</td>
                                     <td>120</td>
@@ -232,7 +232,7 @@
                                     <td>0.65</td>
                                     <td><span class="badge bg-warning">Hold</span></td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td>2023-06-08</td>
                                     <td>$7.95</td>
                                     <td>95</td>
@@ -240,7 +240,7 @@
                                     <td>0.68</td>
                                     <td><span class="badge bg-success">Hold</span></td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td>2023-06-01</td>
                                     <td>$7.80</td>
                                     <td>110</td>
@@ -248,7 +248,7 @@
                                     <td>0.72</td>
                                     <td><span class="badge bg-success">Hold</span></td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td>2023-05-25</td>
                                     <td>$7.50</td>
                                     <td>130</td>
@@ -256,7 +256,7 @@
                                     <td>0.75</td>
                                     <td><span class="badge bg-success">Hold</span></td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td>2023-05-18</td>
                                     <td>$7.25</td>
                                     <td>145</td>
@@ -273,9 +273,257 @@
     </div>
 </div>
 
+<style>
+    .dashboard-card {
+        transition: all 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .dashboard-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+    }
+    
+    .dashboard-card:hover::before {
+        left: 100%;
+    }
+    
+    .dashboard-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(135deg, #f8f9fc, #e4e6f0);
+        border: none;
+    }
+    
+    .stat-card {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+        transform: rotate(30deg);
+        pointer-events: none;
+    }
+    
+    /* Animation Classes */
+    .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        animation-fill-mode: forwards;
+    }
+    
+    .fade-in-up.delay-1 {
+        animation: fadeInUp 0.8s 0.2s forwards;
+    }
+    
+    .fade-in-up.delay-2 {
+        animation: fadeInUp 0.8s 0.4s forwards;
+    }
+    
+    .fade-in-up.delay-3 {
+        animation: fadeInUp 0.8s 0.6s forwards;
+    }
+    
+    .fade-in-up.delay-4 {
+        animation: fadeInUp 0.8s 0.8s forwards;
+    }
+    
+    .fade-in-up.delay-5 {
+        animation: fadeInUp 0.8s 1.0s forwards;
+    }
+    
+    .slide-in-right {
+        opacity: 0;
+        transform: translateX(50px);
+        animation-fill-mode: forwards;
+    }
+    
+    .slide-in-right.delay-1 {
+        animation: slideInRight 0.8s 0.2s forwards;
+    }
+    
+    .slide-in-right.delay-2 {
+        animation: slideInRight 0.8s 0.4s forwards;
+    }
+    
+    .slide-in-left {
+        opacity: 0;
+        transform: translateX(-50px);
+        animation-fill-mode: forwards;
+    }
+    
+    .slide-in-left.delay-1 {
+        animation: slideInLeft 0.8s 0.2s forwards;
+    }
+    
+    .slide-in-left.delay-2 {
+        animation: slideInLeft 0.8s 0.4s forwards;
+    }
+    
+    .slide-in-left.delay-3 {
+        animation: slideInLeft 0.8s 0.6s forwards;
+    }
+    
+    .fade-in-row {
+        opacity: 0;
+        transform: translateX(-20px);
+        animation-fill-mode: forwards;
+    }
+    
+    .fade-in-row:nth-child(1) { 
+        animation: fadeInRow 0.5s 0.1s forwards; 
+    }
+    .fade-in-row:nth-child(2) { 
+        animation: fadeInRow 0.5s 0.2s forwards; 
+    }
+    .fade-in-row:nth-child(3) { 
+        animation: fadeInRow 0.5s 0.3s forwards; 
+    }
+    .fade-in-row:nth-child(4) { 
+        animation: fadeInRow 0.5s 0.4s forwards; 
+    }
+    .fade-in-row:nth-child(5) { 
+        animation: fadeInRow 0.5s 0.5s forwards; 
+    }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideInRight {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes fadeInRow {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .btn-hover-grow {
+        transition: all 0.3s ease;
+    }
+    
+    .btn-hover-grow:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .recommendation-item {
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .recommendation-item:hover {
+        background-color: #f8f9fc;
+        transform: translateX(5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .pulse-animation {
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+    }
+    
+    .glow-effect {
+        position: relative;
+    }
+    
+    .glow-effect::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400%;
+        border-radius: 14px;
+        z-index: -1;
+        animation: glowing-border 20s linear infinite;
+    }
+    
+    @keyframes glowing-border {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+    
+    .counter-animation {
+        animation: counterAnimation 2s ease-out;
+    }
+    
+    @keyframes counterAnimation {
+        0% { transform: scale(0.8); opacity: 0; }
+        70% { transform: scale(1.1); }
+        100% { transform: scale(1); opacity: 1; }
+    }
+</style>
+
 <script>
 // Initialize price trend chart
 document.addEventListener('DOMContentLoaded', function() {
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Check if animation hasn't already started
+                if (!entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    entry.target.style.animationPlayState = 'running';
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Observe animated elements
+    document.querySelectorAll('.fade-in-up, .slide-in-right, .slide-in-left, .fade-in-row').forEach(el => {
+        observer.observe(el);
+    });
+
     const ctx = document.getElementById('priceTrendChart').getContext('2d');
     new Chart(ctx, {
         type: 'line',
@@ -288,21 +536,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 backgroundColor: 'rgba(212, 175, 55, 0.1)',
                 borderWidth: 3,
                 tension: 0.4,
-                fill: true
+                fill: true,
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                }
             }, {
                 label: 'Seasonal Average',
                 data: [6.5, 6.6, 6.8, 7.0, 7.2, 7.5, 7.8, 7.6, 7.3, 7.1, 6.9, 6.7],
                 borderColor: '#8b4513',
                 borderWidth: 2,
                 borderDash: [5, 5],
-                fill: false
+                fill: false,
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart',
+                    delay: 500
+                }
             }, {
                 label: 'Optimal Selling Price',
                 data: [7.5, 7.6, 7.8, 8.0, 8.2, 8.5, 8.8, 8.6, 8.3, 8.1, 7.9, 8.0],
                 borderColor: '#28a745',
                 borderWidth: 2,
                 borderDash: [10, 5],
-                fill: false
+                fill: false,
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart',
+                    delay: 1000
+                }
             }]
         },
         options: {
@@ -326,6 +588,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 legend: {
                     position: 'top',
                 }
+            },
+            animation: {
+                duration: 2000,
+                easing: 'easeOutQuart'
             }
         }
     });
