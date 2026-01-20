@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -29,6 +30,7 @@ urlpatterns = [
     path('predictions-recommendations/', views.ai_predictions, name='predictions-recommendations'),
     path('climate-environment/', views.climate_data, name='climate-environment'),
     path('market-price/', views.ai_predictions, name='market-price'),
+    path('login/', views.login_view, name='login'),
     path('admin/', admin.site.urls),
     path('api/climate/', include('climate.urls')),
     path('api/hives/', include('hives.urls')),
