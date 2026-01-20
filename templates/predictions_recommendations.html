@@ -4,43 +4,43 @@
 
 {% block content %}
 <div class="container py-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1>Predictions & Recommendations</h1>
-        <button class="btn btn-primary" id="refreshPredictionsBtn">
+    <div class="d-flex justify-content-between align-items-center mb-4 fade-in-up">
+        <h1 class="display-4 fw-bold">Predictions & Recommendations</h1>
+        <button class="btn btn-primary btn-lg px-4 py-2 btn-hover-grow" id="refreshPredictionsBtn">
             <i class="fas fa-sync-alt"></i> Refresh Predictions
         </button>
     </div>
 
     <div class="row mb-4">
-        <div class="col-md-3">
-            <div class="card text-center bg-primary text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Active Predictions</h5>
-                    <h3 class="display-4">24</h3>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-1">
+            <div class="card text-center bg-primary text-white shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #4e73df, #2e59d9); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Active Predictions</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">24</h3>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card text-center bg-success text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Recommendations</h5>
-                    <h3 class="display-4">8</h3>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-2">
+            <div class="card text-center bg-success text-white shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #1cc88a, #13855c); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Recommendations</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">8</h3>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card text-center bg-info text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Accuracy Rate</h5>
-                    <h3 class="display-4">94%</h3>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-3">
+            <div class="card text-center bg-info text-white shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #36b9cc, #258391); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Accuracy Rate</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">94%</h3>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card text-center bg-warning text-dark">
-                <div class="card-body">
-                    <h5 class="card-title">Adoption Rate</h5>
-                    <h3 class="display-4">78%</h3>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-4">
+            <div class="card text-center bg-warning text-dark shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #f6c23e, #d6a22b); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Adoption Rate</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">78%</h3>
                 </div>
             </div>
         </div>
@@ -48,13 +48,13 @@
 
     <div class="row">
         <div class="col-lg-8">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">AI Predictions per Hive</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-right delay-1">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">AI Predictions per Hive</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-hover table-striped">
                             <thead class="table-light">
                                 <tr>
                                     <th>Hive ID</th>
@@ -65,7 +65,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td><strong>HIVE-001</strong></td>
                                     <td>12.5kg</td>
                                     <td>
@@ -84,7 +84,7 @@
                                         <span class="badge bg-success">92%</span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td><strong>HIVE-002</strong></td>
                                     <td>11.2kg</td>
                                     <td>
@@ -103,7 +103,7 @@
                                         <span class="badge bg-success">88%</span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td><strong>HIVE-003</strong></td>
                                     <td>8.7kg</td>
                                     <td>
@@ -122,7 +122,7 @@
                                         <span class="badge bg-warning">82%</span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="fade-in-row">
                                     <td><strong>HIVE-004</strong></td>
                                     <td>6.3kg</td>
                                     <td>
@@ -149,13 +149,13 @@
         </div>
 
         <div class="col-lg-4">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Suggested Actions</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-left delay-1">
+                <div class="card-header py-3 gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Suggested Actions</h6>
                 </div>
                 <div class="card-body">
                     <div class="list-group list-group-flush">
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action recommendation-item fade-in-up">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">Feed Colony</h6>
                                 <span class="badge bg-danger">High Priority</span>
@@ -163,7 +163,7 @@
                             <p class="mb-1 small">HIVE-004 - Low weight and high absconding risk</p>
                             <small class="text-muted">Feed with sugar syrup to prevent absconding</small>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action recommendation-item fade-in-up delay-1">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">Provide Shading</h6>
                                 <span class="badge bg-warning">Medium Priority</span>
@@ -171,7 +171,7 @@
                             <p class="mb-1 small">HIVE-003 - Monitor for swarming signs</p>
                             <small class="text-muted">Install shade cloth to reduce overheating</small>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action recommendation-item fade-in-up delay-2">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">Add Supers</h6>
                                 <span class="badge bg-success">Low Priority</span>
@@ -179,7 +179,7 @@
                             <p class="mb-1 small">HIVE-002 - High productivity expected</p>
                             <small class="text-muted">Add honey supers before harvest window</small>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action recommendation-item fade-in-up delay-3">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">Harvest Timing</h6>
                                 <span class="badge bg-info">Information</span>
@@ -193,9 +193,9 @@
         </div>
     </div>
 
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Detailed Recommendations</h6>
+    <div class="card shadow mb-4 dashboard-card fade-in-up delay-3">
+        <div class="card-header py-3 gradient-bg">
+            <h6 class="m-0 font-weight-bold text-primary fs-5">Detailed Recommendations</h6>
         </div>
         <div class="card-body">
             <div class="accordion" id="recommendationsAccordion">
@@ -208,14 +208,14 @@
                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#recommendationsAccordion">
                         <div class="accordion-body">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <li class="list-group-item d-flex justify-content-between align-items-start fade-in-up">
                                     <div class="ms-2 me-auto">
                                         <div class="fw-bold">HIVE-004</div>
                                         Feed with 2:1 sugar syrup (2 parts sugar, 1 part water) at 1 liter per week. High absconding risk requires immediate attention.
                                     </div>
                                     <span class="badge bg-danger rounded-pill">Urgent</span>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <li class="list-group-item d-flex justify-content-between align-items-start fade-in-up delay-1">
                                     <div class="ms-2 me-auto">
                                         <div class="fw-bold">HIVE-003</div>
                                         Light feeding with 1:1 syrup to prevent starvation during dearth period.
@@ -235,14 +235,14 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#recommendationsAccordion">
                         <div class="accordion-body">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <li class="list-group-item d-flex justify-content-between align-items-start fade-in-up">
                                     <div class="ms-2 me-auto">
                                         <div class="fw-bold">HIVE-003</div>
                                         Install temporary shade cloth to reduce internal temperature and prevent swarming behavior.
                                     </div>
                                     <span class="badge bg-info rounded-pill">Within 48hrs</span>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <li class="list-group-item d-flex justify-content-between align-items-start fade-in-up delay-1">
                                     <div class="ms-2 me-auto">
                                         <div class="fw-bold">HIVE-004</div>
                                         Improve ventilation by adding upper entrances or screened bottom boards.
@@ -262,7 +262,7 @@
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#recommendationsAccordion">
                         <div class="accordion-body">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <li class="list-group-item d-flex justify-content-between align-items-start fade-in-up">
                                     <div class="ms-2 me-auto">
                                         <div class="fw-bold">HIVE-004</div>
                                         Consider relocating to area with better nectar sources due to low productivity and high absconding risk.
@@ -282,14 +282,14 @@
                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#recommendationsAccordion">
                         <div class="accordion-body">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <li class="list-group-item d-flex justify-content-between align-items-start fade-in-up">
                                     <div class="ms-2 me-auto">
                                         <div class="fw-bold">HIVE-001</div>
                                         Optimal harvest window: May 15-20. Expected yield: 12.5kg. Wait for 80% sealed cells.
                                     </div>
                                     <span class="badge bg-success rounded-pill">Confirmed</span>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <li class="list-group-item d-flex justify-content-between align-items-start fade-in-up delay-1">
                                     <div class="ms-2 me-auto">
                                         <div class="fw-bold">HIVE-002</div>
                                         Harvest window: May 18-25. Expected yield: 11.2kg. Monitor closely for timing.
@@ -305,24 +305,263 @@
     </div>
 </div>
 
-<script>
-document.getElementById('refreshPredictionsBtn').addEventListener('click', function() {
-    const btn = this;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Updating...';
-    btn.disabled = true;
+<style>
+    .dashboard-card {
+        transition: all 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+    }
     
-    // Simulate API call to refresh predictions
-    setTimeout(function() {
-        btn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Predictions';
-        btn.disabled = false;
-        alert('Predictions refreshed successfully!');
-    }, 1500);
-});
+    .dashboard-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+    }
+    
+    .dashboard-card:hover::before {
+        left: 100%;
+    }
+    
+    .dashboard-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(135deg, #f8f9fc, #e4e6f0);
+        border: none;
+    }
+    
+    .stat-card {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+        transform: rotate(30deg);
+        pointer-events: none;
+    }
+    
+    /* Animation Classes */
+    .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        animation-fill-mode: forwards;
+    }
+    
+    .fade-in-up.delay-1 {
+        animation: fadeInUp 0.8s 0.2s forwards;
+    }
+    
+    .fade-in-up.delay-2 {
+        animation: fadeInUp 0.8s 0.4s forwards;
+    }
+    
+    .fade-in-up.delay-3 {
+        animation: fadeInUp 0.8s 0.6s forwards;
+    }
+    
+    .fade-in-up.delay-4 {
+        animation: fadeInUp 0.8s 0.8s forwards;
+    }
+    
+    .slide-in-right {
+        opacity: 0;
+        transform: translateX(50px);
+        animation-fill-mode: forwards;
+    }
+    
+    .slide-in-right.delay-1 {
+        animation: slideInRight 0.8s 0.2s forwards;
+    }
+    
+    .slide-in-right.delay-2 {
+        animation: slideInRight 0.8s 0.4s forwards;
+    }
+    
+    .slide-in-left {
+        opacity: 0;
+        transform: translateX(-50px);
+        animation-fill-mode: forwards;
+    }
+    
+    .slide-in-left.delay-1 {
+        animation: slideInLeft 0.8s 0.2s forwards;
+    }
+    
+    .slide-in-left.delay-2 {
+        animation: slideInLeft 0.8s 0.4s forwards;
+    }
+    
+    .fade-in-row {
+        opacity: 0;
+        transform: translateX(-20px);
+        animation-fill-mode: forwards;
+    }
+    
+    .fade-in-row:nth-child(1) { 
+        animation: fadeInRow 0.5s 0.1s forwards; 
+    }
+    .fade-in-row:nth-child(2) { 
+        animation: fadeInRow 0.5s 0.2s forwards; 
+    }
+    .fade-in-row:nth-child(3) { 
+        animation: fadeInRow 0.5s 0.3s forwards; 
+    }
+    .fade-in-row:nth-child(4) { 
+        animation: fadeInRow 0.5s 0.4s forwards; 
+    }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideInRight {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes fadeInRow {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .btn-hover-grow {
+        transition: all 0.3s ease;
+    }
+    
+    .btn-hover-grow:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .recommendation-item {
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .recommendation-item:hover {
+        background-color: #f8f9fc;
+        transform: translateX(5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .pulse-animation {
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+    }
+    
+    .glow-effect {
+        position: relative;
+    }
+    
+    .glow-effect::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400%;
+        border-radius: 14px;
+        z-index: -1;
+        animation: glowing-border 20s linear infinite;
+    }
+    
+    @keyframes glowing-border {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+    
+    .counter-animation {
+        animation: counterAnimation 2s ease-out;
+    }
+    
+    @keyframes counterAnimation {
+        0% { transform: scale(0.8); opacity: 0; }
+        70% { transform: scale(1.1); }
+        100% { transform: scale(1); opacity: 1; }
+    }
+</style>
 
-// Initialize tooltips if needed
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Check if animation hasn't already started
+                if (!entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    entry.target.style.animationPlayState = 'running';
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Observe animated elements
+    document.querySelectorAll('.fade-in-up, .slide-in-right, .slide-in-left, .fade-in-row').forEach(el => {
+        observer.observe(el);
+    });
+
+    document.getElementById('refreshPredictionsBtn').addEventListener('click', function() {
+        const btn = this;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Updating...';
+        btn.disabled = true;
+        
+        // Simulate API call to refresh predictions
+        setTimeout(function() {
+            btn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Predictions';
+            btn.disabled = false;
+            alert('Predictions refreshed successfully!');
+        }, 1500);
+    });
+
+    // Initialize tooltips if needed
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
 });
 </script>
 {% endblock %}
