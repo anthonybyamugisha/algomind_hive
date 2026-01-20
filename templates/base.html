@@ -282,14 +282,64 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="text-center">
-        <div class="container">
+    <footer class="text-center text-white" style="background-color: var(--dark-color);">
+        <div class="container py-5">
             <div class="row">
-                <div class="col-md-12">
-                    <h5>Algomind Hive - AI-Powered Beekeeping Intelligence</h5>
-                    <p>Transforming raw environmental and hive data into practical decisions</p>
-                    <p>&copy; 2026 Algomind Hive. All rights reserved.</p>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">ALGOMIND</h5>
+                    <p class="mb-4">Smarter Beekeeping, Smarter Profits</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="{% url 'home' %}" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="{% url 'dashboard' %}" class="text-white text-decoration-none">Dashboard</a></li>
+                        <li class="mb-2"><a href="{% url 'hive-observation' %}" class="text-white text-decoration-none">Hive Observation</a></li>
+                        <li class="mb-2"><a href="{% url 'climate-environment' %}" class="text-white text-decoration-none">Climate Data</a></li>
+                        <li class="mb-2"><a href="{% url 'predictions-recommendations' %}" class="text-white text-decoration-none">AI Predictions</a></li>
+                        <li class="mb-2"><a href="{% url 'market-price' %}" class="text-white text-decoration-none">Market Price</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Contact & Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:support@algomind.com" class="text-white text-decoration-none">support@algomind.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+256xxx xxx xxx" class="text-white text-decoration-none">+256 XXX XXX XXX</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <span class="text-white">Rwampara, Uganda</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Legal & Policies</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                    </ul>
+                    <div class="mt-4">
+                        <p class="mb-0">&copy; 2026 ALGOMIND. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="container">
+                <p class="mb-0">Transforming raw environmental and hive data into practical decisions</p>
             </div>
         </div>
     </footer>
