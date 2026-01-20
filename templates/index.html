@@ -7,25 +7,14 @@
 <!-- Hero Section -->
 <section class="py-5" style="background: linear-gradient(135deg, #f5f0e1, #e5ddd0); min-height: 500px;">
     <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-lg-6 text-center text-lg-start">
-                <h1 class="display-3 fw-bold mb-3 text-dark fade-in-up" style="font-size: 2.5rem;">Smart Beekeeping, Powered by AI</h1>
-                <p class="lead fs-5 mb-4 text-dark fade-in-up delay-1">Algomind helps you monitor hives, predict yields, and optimize honey production factoring in climate and environmental conditions, no guesswork, just data-driven decisions.</p>
-                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start fade-in-up delay-2">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="display-3 fw-bold mb-4 text-dark fade-in-up" style="font-size: 2.5rem;">Smart Beekeeping, Powered by AI</h1>
+                <p class="lead fs-5 mb-5 text-dark fade-in-up delay-1">Algomind helps you monitor hives, predict yields, and optimize honey production factoring in climate and environmental conditions, no guesswork, just data-driven decisions.</p>
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center fade-in-up delay-2">
                     <a href="{% url 'register' %}" class="btn btn-primary btn-lg px-4 py-3 btn-hover-grow" style="font-size: 1.1rem;">Get Started</a>
                     <a href="{% url 'login' %}" class="btn btn-outline-dark btn-lg px-4 py-3 btn-hover-grow" style="font-size: 1.1rem;">Log In</a>
                     <a href="#features" class="btn btn-dark btn-lg px-4 py-3 btn-hover-grow" style="font-size: 1.1rem;">Learn More</a>
-                </div>
-            </div>
-            <div class="col-lg-6 mt-4 mt-lg-0">
-                <!-- Image in hero section -->
-                <div class="position-relative slide-in-right">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden rounded-4">
-                        <div class="honeycomb-pattern position-absolute top-0 start-0 w-100 h-100 opacity-10"></div>
-                    </div>
-                    <div class="position-relative bg-white rounded-4 shadow-lg p-2 glow-effect" style="height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                        <img src="{% static 'images/hello.jpeg' %}" alt="AI Beekeeping Platform" class="img-fluid rounded img-hover-zoom" style="max-width: 100%; max-height: 100%; object-fit: cover; width: auto; height: auto;">
-                    </div>
                 </div>
             </div>
         </div>
