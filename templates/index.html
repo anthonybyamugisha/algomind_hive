@@ -143,6 +143,51 @@
     </div>
 </section>
 
+<!-- Blog/News Section -->
+<section class="py-5" style="background: linear-gradient(135deg, var(--accent-color), #f0e6d2);">
+    <div class="container">
+        <div class="text-center mb-5 fade-in-up">
+            <h2 class="fw-bold text-dark">Latest Beekeeping Insights</h2>
+            <p class="lead text-dark">Stay informed with the latest news, tips, and research in beekeeping</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4 fade-in-up delay-1">
+                <div class="card h-100 blog-card">
+                    <div class="card-body">
+                        <div class="badge bg-primary mb-2">Research</div>
+                        <h5 class="card-title">New Study Reveals Impact of Climate Change on Nectar Flow</h5>
+                        <p class="card-text">Recent findings show how shifting weather patterns affect flowering cycles and honey production.</p>
+                        <small class="text-muted">Published 2 days ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in-up delay-2">
+                <div class="card h-100 blog-card">
+                    <div class="card-body">
+                        <div class="badge bg-success mb-2">Tips</div>
+                        <h5 class="card-title">Best Practices for Swarm Prevention in Spring</h5>
+                        <p class="card-text">Expert advice on recognizing early signs and taking preventive measures.</p>
+                        <small class="text-muted">Published 1 week ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in-up delay-3">
+                <div class="card h-100 blog-card">
+                    <div class="card-body">
+                        <div class="badge bg-info mb-2">Technology</div>
+                        <h5 class="card-title">How AI is Revolutionizing Modern Beekeeping</h5>
+                        <p class="card-text">Exploring the latest technological advances in hive monitoring and predictive analytics.</p>
+                        <small class="text-muted">Published 2 weeks ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4 fade-in-up delay-4">
+            <a href="#" class="btn btn-outline-dark btn-lg">View All Articles</a>
+        </div>
+    </div>
+</section>
+
 <!-- FAQ Section -->
 <section class="py-5" style="background: linear-gradient(135deg, var(--accent-color), #f0e6d2);">
     <div class="container">
@@ -271,6 +316,19 @@
     .feature-card:hover {
         transform: translateY(-10px);
         box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    
+    .blog-card {
+        transition: all 0.3s ease;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.8);
+    }
+    
+    .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
     
     /* Animation Classes */
