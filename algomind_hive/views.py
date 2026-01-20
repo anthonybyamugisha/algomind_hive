@@ -38,7 +38,15 @@ def ai_predictions(request):
     return render(request, 'ai_predictions.html')
 
 def login_view(request):
+    if request.method == 'POST':
+        # Just render the page again without processing login
+        # Backend functionality not implemented as per requirements
+        pass
     return render(request, 'registration/login.html')
 
 def register_view(request):
+    if request.method == 'POST':
+        # Just render the page again without processing registration
+        # Backend functionality not implemented as per requirements
+        pass
     return render(request, 'registration/register.html')
