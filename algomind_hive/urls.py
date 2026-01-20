@@ -23,6 +23,7 @@ urlpatterns = [
     path('dashboard/', views.dashboard, name='dashboard'),
     path('dashboard-main/', views.dashboard, name='dashboard-main'),
     path('hive-observation/', views.hive_management, name='hive-observation'),
+    path('hive-management/', views.hive_management, name='hive-management'),
     path('climate-data/', views.climate_data, name='climate-data'),
     path('ai-predictions/', views.ai_predictions, name='ai-predictions'),
     path('predictions-recommendations/', views.ai_predictions, name='predictions-recommendations'),
