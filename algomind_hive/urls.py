@@ -16,13 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse
-
-def home(request):
-    return HttpResponse("<h1>Algomind Hive - AI-Powered Beekeeping Intelligence Platform</h1><p>Welcome to the Algomind Hive API. Available endpoints:</p><ul><li>/api/climate/ - Climate data and predictions</li><li>/api/hives/ - Hive management and activity</li><li>/api/ai/ - AI predictions and recommendations</li><li>/admin/ - Admin panel</li></ul>")
+from . import views
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('', views.home, name='home'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('climate-data/', views.climate_data, name='climate-data'),
+    path('hive-management/', views.hive_management, name='hive-management'),
+    path('ai-predictions/', views.ai_predictions, name='ai-predictions'),
     path('admin/', admin.site.urls),
     path('api/climate/', include('climate.urls')),
     path('api/hives/', include('hives.urls')),
