@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+
+{% block title %}Hive Observation - Algomind Hive{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Hive Observation & Data Entry</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Hive Data Entry Form</h6>
+                </div>
+                <div class="card-body">
+                    <form id="hiveObservationForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="hiveId" class="form-label">Hive ID</label>
+                                    <select class="form-select" id="hiveId" required>
+                                        <option value="">Select Hive...</option>
+                                        <option value="HIVE-001">HIVE-001</option>
+                                        <option value="HIVE-002">HIVE-002</option>
+                                        <option value="HIVE-003">HIVE-003</option>
+                                        <option value="HIVE-004">HIVE-004</option>
+                                        <option value="HIVE-005">HIVE-005</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="observationDate" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="observationDate" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="hiveWeight" class="form-label">Hive Weight (kg)</label>
+                                    <input type="number" class="form-control" id="hiveWeight" step="0.1" placeholder="Enter weight in kg" required>
+                                    <div class="form-text">Current weight of the hive including honey</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="foragingActivity" class="form-label">Foraging Activity Level</label>
+                                    <select class="form-select" id="foragingActivity" required>
+                                        <option value="">Select activity level...</option>
+                                        <option value="1">1 - Very Low</option>
+                                        <option value="2">2 - Low</option>
+                                        <option value="3">3 - Moderate Low</option>
+                                        <option value="4">4 - Moderate</option>
+                                        <option value="5">5 - Moderate High</option>
+                                        <option value="6">6 - High</option>
+                                        <option value="7">7 - Very High</option>
+                                        <option value="8">8 - Extremely High</option>
+                                        <option value="9">9 - Exceptionally High</option>
+                                        <option value="10">10 - Peak Activity</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="broodPresence" class="form-label">Brood Presence</label>
+                                    <select class="form-select" id="broodPresence" required>
+                                        <option value="">Select brood status...</option>
+                                        <option value="present">Present</option>
+                                        <option value="absent">Absent</option>
+                                        <option value="limited">Limited</option>
+                                        <option value="extensive">Extensive</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="aggressiveness" class="form-label">Aggressiveness Level</label>
+                                    <select class="form-select" id="aggressiveness" required>
+                                        <option value="">Select aggressiveness level...</option>
+                                        <option value="1">1 - Very Calm</option>
+                                        <option value="2">2 - Calm</option>
+                                        <option value="3">3 - Slightly Defensive</option>
+                                        <option value="4">4 - Defensive</option>
+                                        <option value="5">5 - Moderately Defensive</option>
+                                        <option value="6">6 - Quite Defensive</option>
+                                        <option value="7">7 - Very Defensive</option>
+                                        <option value="8">8 - Aggressive</option>
+                                        <option value="9">9 - Very Aggressive</option>
+                                        <option value="10">10 - Extremely Aggressive</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="floweringNotes" class="form-label">Notes on Flowering/Bloom</label>
+                            <textarea class="form-control" id="floweringNotes" rows="3" placeholder="Describe nearby flowering plants, bloom stage, nectar sources, etc."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="generalNotes" class="form-label">General Observations</label>
+                            <textarea class="form-control" id="generalNotes" rows="4" placeholder="Any other observations about hive condition, weather, etc."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Sensor Readings (Optional)</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control mb-2" id="internalTemp" step="0.1" placeholder="Internal Temp (°C)">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control mb-2" id="externalTemp" step="0.1" placeholder="External Temp (°C)">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control mb-2" id="humidity" step="0.1" placeholder="Humidity (%)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="button" class="btn btn-secondary me-md-2" onclick="clearForm()">Clear</button>
+                            <button type="submit" class="btn btn-primary">Submit Observation</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Quick Tips</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-weight-hanging text-primary me-2"></i>
+                            <strong>Weight Measurement:</strong> Weigh hives regularly to track honey production
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-bee text-warning me-2"></i>
+                            <strong>Foraging Activity:</strong> Observe entrance traffic during peak hours
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-egg text-success me-2"></i>
+                            <strong>Brood Pattern:</strong> Look for consistent egg-laying pattern
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-ruler-combined text-info me-2"></i>
+                            <strong>Consistency:</strong> Take measurements at same time daily
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Recent Observations</h6>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">HIVE-001</h6>
+                                <small class="text-muted">Today</small>
+                            </div>
+                            <p class="mb-1">Weight: 32.5kg | Activity: 8/10 | Brood: Present</p>
+                            <small class="text-success">Healthy colony</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">HIVE-003</h6>
+                                <small class="text-muted">Yesterday</small>
+                            </div>
+                            <p class="mb-1">Weight: 28.1kg | Activity: 6/10 | Brood: Limited</p>
+                            <small class="text-warning">Monitor for swarming signs</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">HIVE-002</h6>
+                                <small class="text-muted">2 days ago</small>
+                            </div>
+                            <p class="mb-1">Weight: 35.2kg | Activity: 9/10 | Brood: Extensive</p>
+                            <small class="text-success">High productivity</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('hiveObservationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Collect form data
+    const formData = {
+        hiveId: document.getElementById('hiveId').value,
+        observationDate: document.getElementById('observationDate').value,
+        hiveWeight: document.getElementById('hiveWeight').value,
+        foragingActivity: document.getElementById('foragingActivity').value,
+        broodPresence: document.getElementById('broodPresence').value,
+        aggressiveness: document.getElementById('aggressiveness').value,
+        floweringNotes: document.getElementById('floweringNotes').value,
+        generalNotes: document.getElementById('generalNotes').value,
+        internalTemp: document.getElementById('internalTemp').value,
+        externalTemp: document.getElementById('externalTemp').value,
+        humidity: document.getElementById('humidity').value
+    };
+    
+    // Simulate API call to Django backend
+    console.log('Submitting hive observation:', formData);
+    
+    // Show success message
+    alert('Hive observation submitted successfully! The AI will process this data and generate predictions.');
+    
+    // Reset form
+    clearForm();
+});
+
+function clearForm() {
+    document.getElementById('hiveObservationForm').reset();
+    document.getElementById('observationDate').value = new Date().toISOString().split('T')[0];
+}
+
+// Set today's date as default
+document.getElementById('observationDate').value = new Date().toISOString().split('T')[0];
+</script>
+{% endblock %}

@@ -1,0 +1,328 @@
+{% extends 'base.html' %}
+
+{% block title %}Predictions & Recommendations - Algomind Hive{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Predictions & Recommendations</h1>
+        <button class="btn btn-primary" id="refreshPredictionsBtn">
+            <i class="fas fa-sync-alt"></i> Refresh Predictions
+        </button>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-center bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Active Predictions</h5>
+                    <h3 class="display-4">24</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Recommendations</h5>
+                    <h3 class="display-4">8</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Accuracy Rate</h5>
+                    <h3 class="display-4">94%</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center bg-warning text-dark">
+                <div class="card-body">
+                    <h5 class="card-title">Adoption Rate</h5>
+                    <h3 class="display-4">78%</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">AI Predictions per Hive</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Hive ID</th>
+                                    <th>Honey Yield Est.</th>
+                                    <th>Absconding Risk</th>
+                                    <th>Swarming Prob.</th>
+                                    <th>Confidence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>HIVE-001</strong></td>
+                                    <td>12.5kg</td>
+                                    <td>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-success" style="width: 10%"></div>
+                                        </div>
+                                        <small class="text-muted">Low (0.1)</small>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-success" style="width: 15%"></div>
+                                        </div>
+                                        <small class="text-muted">Low (0.15)</small>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success">92%</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HIVE-002</strong></td>
+                                    <td>11.2kg</td>
+                                    <td>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-warning" style="width: 65%"></div>
+                                        </div>
+                                        <small class="text-muted">Medium (0.65)</small>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-success" style="width: 25%"></div>
+                                        </div>
+                                        <small class="text-muted">Low (0.25)</small>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success">88%</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HIVE-003</strong></td>
+                                    <td>8.7kg</td>
+                                    <td>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                                        </div>
+                                        <small class="text-muted">High (0.85)</small>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-warning" style="width: 70%"></div>
+                                        </div>
+                                        <small class="text-muted">High (0.70)</small>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-warning">82%</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HIVE-004</strong></td>
+                                    <td>6.3kg</td>
+                                    <td>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-danger" style="width: 92%"></div>
+                                        </div>
+                                        <small class="text-muted">Very High (0.92)</small>
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-danger" style="width: 88%"></div>
+                                        </div>
+                                        <small class="text-muted">Very High (0.88)</small>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success">90%</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Suggested Actions</h6>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Feed Colony</h6>
+                                <span class="badge bg-danger">High Priority</span>
+                            </div>
+                            <p class="mb-1 small">HIVE-004 - Low weight and high absconding risk</p>
+                            <small class="text-muted">Feed with sugar syrup to prevent absconding</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Provide Shading</h6>
+                                <span class="badge bg-warning">Medium Priority</span>
+                            </div>
+                            <p class="mb-1 small">HIVE-003 - Monitor for swarming signs</p>
+                            <small class="text-muted">Install shade cloth to reduce overheating</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Add Supers</h6>
+                                <span class="badge bg-success">Low Priority</span>
+                            </div>
+                            <p class="mb-1 small">HIVE-002 - High productivity expected</p>
+                            <small class="text-muted">Add honey supers before harvest window</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Harvest Timing</h6>
+                                <span class="badge bg-info">Information</span>
+                            </div>
+                            <p class="mb-1 small">HIVE-001 - Optimal harvest window</p>
+                            <small class="text-muted">Harvest in 3-5 days for maximum yield</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Detailed Recommendations</h6>
+        </div>
+        <div class="card-body">
+            <div class="accordion" id="recommendationsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            <i class="fas fa-seedling me-2 text-success"></i> Feeding Recommendations
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#recommendationsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HIVE-004</div>
+                                        Feed with 2:1 sugar syrup (2 parts sugar, 1 part water) at 1 liter per week. High absconding risk requires immediate attention.
+                                    </div>
+                                    <span class="badge bg-danger rounded-pill">Urgent</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HIVE-003</div>
+                                        Light feeding with 1:1 syrup to prevent starvation during dearth period.
+                                    </div>
+                                    <span class="badge bg-warning rounded-pill">Soon</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            <i class="fas fa-sun me-2 text-warning"></i> Environmental Controls
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#recommendationsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HIVE-003</div>
+                                        Install temporary shade cloth to reduce internal temperature and prevent swarming behavior.
+                                    </div>
+                                    <span class="badge bg-info rounded-pill">Within 48hrs</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HIVE-004</div>
+                                        Improve ventilation by adding upper entrances or screened bottom boards.
+                                    </div>
+                                    <span class="badge bg-info rounded-pill">This week</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            <i class="fas fa-route me-2 text-primary"></i> Migration Suggestions
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#recommendationsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HIVE-004</div>
+                                        Consider relocating to area with better nectar sources due to low productivity and high absconding risk.
+                                    </div>
+                                    <span class="badge bg-secondary rounded-pill">Option</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            <i class="fas fa-cut me-2 text-info"></i> Harvest Timing
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#recommendationsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HIVE-001</div>
+                                        Optimal harvest window: May 15-20. Expected yield: 12.5kg. Wait for 80% sealed cells.
+                                    </div>
+                                    <span class="badge bg-success rounded-pill">Confirmed</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HIVE-002</div>
+                                        Harvest window: May 18-25. Expected yield: 11.2kg. Monitor closely for timing.
+                                    </div>
+                                    <span class="badge bg-info rounded-pill">Watch</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('refreshPredictionsBtn').addEventListener('click', function() {
+    const btn = this;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Updating...';
+    btn.disabled = true;
+    
+    // Simulate API call to refresh predictions
+    setTimeout(function() {
+        btn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Predictions';
+        btn.disabled = false;
+        alert('Predictions refreshed successfully!');
+    }, 1500);
+});
+
+// Initialize tooltips if needed
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+});
+</script>
+{% endblock %}

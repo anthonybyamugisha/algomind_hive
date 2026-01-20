@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Algomind Hive{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Beekeeping Dashboard</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
+        </a>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Total Hives Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Total Hives
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">24</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-home fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Hives Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Active Hives
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">22</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-check-circle fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honey Yield Prediction Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Honey Yield Prediction
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">280kg</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-honey-pot fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Absconding Risk Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Absconding Risk
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Low</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Climate Summary Row -->
+    <div class="row">
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Climate Summary</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-temperature-high fa-2x text-primary mb-2"></i>
+                                <h5>22°C</h5>
+                                <small>Avg Temperature</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-tint fa-2x text-info mb-2"></i>
+                                <h5>65%</h5>
+                                <small>Humidity</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-cloud-rain fa-2x text-success mb-2"></i>
+                                <h5>12mm</h5>
+                                <small>Rainfall</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-seedling fa-2x text-warning mb-2"></i>
+                                <h5>78%</h5>
+                                <small>Nectar Flow</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk Indicators -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Risk Indicators</h6>
+                </div>
+                <div class="card-body">
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 15%">Low Risk</div>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 25%">Medium Risk</div>
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 10%">High Risk</div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Healthy Hives
+                            <span class="badge badge-success badge-pill">18</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Monitor Required
+                            <span class="badge badge-warning badge-pill">4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Immediate Action
+                            <span class="badge badge-danger badge-pill">2</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alerts Section -->
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Recent Alerts</h6>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Optimal Foraging Conditions</h5>
+                                <small class="text-muted">Today</small>
+                            </div>
+                            <p class="mb-1">Nectar flow probability is at 82%. Expect increased activity in the morning.</p>
+                            <small class="text-success">Priority: High</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Monitor Colony Stress</h5>
+                                <small class="text-muted">2 hours ago</small>
+                            </div>
+                            <p class="mb-1">Temperature readings indicate potential stress. Consider providing shade.</p>
+                            <small class="text-warning">Priority: Medium</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Harvest Window Opening</h5>
+                                <small class="text-muted">Yesterday</small>
+                            </div>
+                            <p class="mb-1">Harvest window opens tomorrow. Expected yield: 12.5kg</p>
+                            <small class="text-success">Priority: High</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hive Health Overview -->
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Hive Health Overview</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Hive ID</th>
+                                    <th>Health Status</th>
+                                    <th>Yield Est.</th>
+                                    <th>Next Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HIVE-001</td>
+                                    <td><span class="badge bg-success">Healthy</span></td>
+                                    <td>12.5kg</td>
+                                    <td>Monitor</td>
+                                </tr>
+                                <tr>
+                                    <td>HIVE-002</td>
+                                    <td><span class="badge bg-success">Healthy</span></td>
+                                    <td>11.2kg</td>
+                                    <td>Harvest in 3 days</td>
+                                </tr>
+                                <tr>
+                                    <td>HIVE-003</td>
+                                    <td><span class="badge bg-warning">Monitor</span></td>
+                                    <td>8.7kg</td>
+                                    <td>Check for swarming</td>
+                                </tr>
+                                <tr>
+                                    <td>HIVE-004</td>
+                                    <td><span class="badge bg-danger">Attention</span></td>
+                                    <td>6.3kg</td>
+                                    <td>Immediate inspection</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
