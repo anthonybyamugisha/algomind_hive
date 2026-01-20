@@ -1,0 +1,367 @@
+{% extends 'base.html' %}
+
+{% block title %}Climate & Environment - Algomind Hive{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Climate & Environment</h1>
+        <button class="btn btn-primary" id="updateClimateBtn">
+            <i class="fas fa-sync-alt"></i> Update Forecast
+        </button>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-center bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Current Temp</h5>
+                    <h3 class="display-4">22°C</h3>
+                    <p><i class="fas fa-temperature-high"></i> Feels like 24°C</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Humidity</h5>
+                    <h3 class="display-4">65%</h3>
+                    <p><i class="fas fa-tint"></i> Comfortable</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Rainfall (24h)</h5>
+                    <h3 class="display-4">2mm</h3>
+                    <p><i class="fas fa-cloud-rain"></i> Light</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center bg-warning text-dark">
+                <div class="card-body">
+                    <h5 class="card-title">Nectar Flow</h5>
+                    <h3 class="display-4">78%</h3>
+                    <p><i class="fas fa-seedling"></i> Good</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">5-Day Weather Forecast</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-2 mb-3">
+                            <div class="bg-light rounded p-3 h-100">
+                                <h6>Today</h6>
+                                <i class="fas fa-sun fa-2x text-warning mb-2"></i>
+                                <h5>22°C</h5>
+                                <small>Partly Cloudy</small>
+                                <div class="mt-2">
+                                    <span class="badge bg-success">Nectar: 78%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <div class="bg-light rounded p-3 h-100">
+                                <h6>Tomorrow</h6>
+                                <i class="fas fa-cloud-sun fa-2x text-info mb-2"></i>
+                                <h5>24°C</h5>
+                                <small>Sunny</small>
+                                <div class="mt-2">
+                                    <span class="badge bg-success">Nectar: 85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <div class="bg-light rounded p-3 h-100">
+                                <h6>+2 Days</h6>
+                                <i class="fas fa-cloud-showers-heavy fa-2x text-primary mb-2"></i>
+                                <h5>20°C</h5>
+                                <small>Showers</small>
+                                <div class="mt-2">
+                                    <span class="badge bg-warning">Nectar: 45%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <div class="bg-light rounded p-3 h-100">
+                                <h6>+3 Days</h6>
+                                <i class="fas fa-cloud-sun fa-2x text-info mb-2"></i>
+                                <h5>26°C</h5>
+                                <small>Mostly Sunny</small>
+                                <div class="mt-2">
+                                    <span class="badge bg-success">Nectar: 82%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <div class="bg-light rounded p-3 h-100">
+                                <h6>+4 Days</h6>
+                                <i class="fas fa-sun fa-2x text-warning mb-2"></i>
+                                <h5>28°C</h5>
+                                <small>Sunny</small>
+                                <div class="mt-2">
+                                    <span class="badge bg-danger">Nectar: 30%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <div class="bg-light rounded p-3 h-100">
+                                <h6>+5 Days</h6>
+                                <i class="fas fa-cloud fa-2x text-secondary mb-2"></i>
+                                <h5>21°C</h5>
+                                <small>Cloudy</small>
+                                <div class="mt-2">
+                                    <span class="badge bg-success">Nectar: 75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Nectar Flow Probability</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container" style="position: relative; height:300px;">
+                        <canvas id="nectarFlowChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Climate Impact on Hives</h6>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">HIVE-001</h6>
+                                <span class="badge bg-success">Optimal</span>
+                            </div>
+                            <p class="mb-1 small">Current temp: 22°C ideal for foraging</p>
+                            <small class="text-muted">Nectar flow: 78% - Good activity expected</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">HIVE-002</h6>
+                                <span class="badge bg-success">Optimal</span>
+                            </div>
+                            <p class="mb-1 small">Warm conditions favor honey processing</p>
+                            <small class="text-muted">Increased evaporation - monitor moisture</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">HIVE-003</h6>
+                                <span class="badge bg-warning">Monitor</span>
+                            </div>
+                            <p class="mb-1 small">Approaching critical temp for swarming</p>
+                            <small class="text-muted">High humidity may increase swarming risk</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">HIVE-004</h6>
+                                <span class="badge bg-danger">Attention</span>
+                            </div>
+                            <p class="mb-1 small">High stress conditions</p>
+                            <small class="text-muted">High absconding risk - consider cooling</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Environmental Alerts</h6>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i> <strong>Optimal Foraging Window</strong><br>
+                        Best foraging conditions between 10am-3pm today with 78% nectar flow probability.
+                    </div>
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle"></i> <strong>Swarming Risk</strong><br>
+                        HIVE-003 at high risk of swarming due to warm temperatures and high humidity.
+                    </div>
+                    <div class="alert alert-danger">
+                        <i class="fas fa-bolt"></i> <strong>Weather Alert</strong><br>
+                        Severe weather expected in 48 hours. Secure hive covers and prepare for storm.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Climate Data History</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Min Temp (°C)</th>
+                                    <th>Max Temp (°C)</th>
+                                    <th>Rainfall (mm)</th>
+                                    <th>Humidity (%)</th>
+                                    <th>Nectar Flow Prob (%)</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2023-06-15</td>
+                                    <td>18</td>
+                                    <td>28</td>
+                                    <td>5</td>
+                                    <td>62</td>
+                                    <td>78</td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-14</td>
+                                    <td>16</td>
+                                    <td>26</td>
+                                    <td>2</td>
+                                    <td>58</td>
+                                    <td>72</td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-13</td>
+                                    <td>20</td>
+                                    <td>30</td>
+                                    <td>0</td>
+                                    <td>55</td>
+                                    <td>85</td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-12</td>
+                                    <td>22</td>
+                                    <td>32</td>
+                                    <td>0</td>
+                                    <td>50</td>
+                                    <td>90</td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-11</td>
+                                    <td>19</td>
+                                    <td>25</td>
+                                    <td>12</td>
+                                    <td>70</td>
+                                    <td>45</td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Initialize nectar flow chart
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('nectarFlowChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [{
+                label: 'Nectar Flow Probability',
+                data: [78, 85, 45, 82, 30, 75, 68],
+                borderColor: '#d4af37',
+                backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                borderWidth: 3,
+                tension: 0.4,
+                fill: true
+            }, {
+                label: 'Optimal Threshold',
+                data: [70, 70, 70, 70, 70, 70, 70],
+                borderColor: '#28a745',
+                borderWidth: 1,
+                borderDash: [5, 5],
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    min: 0,
+                    max: 100,
+                    title: {
+                        display: true,
+                        text: 'Probability (%)'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Days'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                annotation: {
+                    annotations: {
+                        thresholdLine: {
+                            type: 'line',
+                            yMin: 70,
+                            yMax: 70,
+                            borderColor: '#28a745',
+                            borderWidth: 1,
+                            borderDash: [5, 5],
+                            label: {
+                                display: true,
+                                content: 'Optimal Threshold',
+                                position: 'start'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    // Update climate button functionality
+    document.getElementById('updateClimateBtn').addEventListener('click', function() {
+        const btn = this;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Updating...';
+        btn.disabled = true;
+        
+        // Simulate API call to update climate data
+        setTimeout(function() {
+            btn.innerHTML = '<i class="fas fa-sync-alt"></i> Update Forecast';
+            btn.disabled = false;
+            alert('Climate data updated successfully!');
+        }, 1500);
+    });
+});
+</script>
+{% endblock %}
