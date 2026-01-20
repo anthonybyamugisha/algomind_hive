@@ -224,63 +224,71 @@
     .fade-in-up {
         opacity: 0;
         transform: translateY(30px);
-        animation: fadeInUp 0.8s forwards;
+        animation-fill-mode: forwards;
     }
     
     .fade-in-up.delay-1 {
-        animation-delay: 0.2s;
+        animation: fadeInUp 0.8s 0.2s forwards;
     }
     
     .fade-in-up.delay-2 {
-        animation-delay: 0.4s;
+        animation: fadeInUp 0.8s 0.4s forwards;
     }
     
     .fade-in-up.delay-3 {
-        animation-delay: 0.6s;
+        animation: fadeInUp 0.8s 0.6s forwards;
     }
     
     .fade-in-up.delay-4 {
-        animation-delay: 0.8s;
+        animation: fadeInUp 0.8s 0.8s forwards;
     }
     
     .slide-in-right {
         opacity: 0;
         transform: translateX(50px);
-        animation: slideInRight 0.8s forwards;
+        animation-fill-mode: forwards;
     }
     
     .slide-in-right.delay-1 {
-        animation-delay: 0.2s;
+        animation: slideInRight 0.8s 0.2s forwards;
     }
     
     .slide-in-right.delay-2 {
-        animation-delay: 0.4s;
+        animation: slideInRight 0.8s 0.4s forwards;
     }
     
     .slide-in-left {
         opacity: 0;
         transform: translateX(-50px);
-        animation: slideInLeft 0.8s forwards;
+        animation-fill-mode: forwards;
     }
     
     .slide-in-left.delay-1 {
-        animation-delay: 0.2s;
+        animation: slideInLeft 0.8s 0.2s forwards;
     }
     
     .slide-in-left.delay-2 {
-        animation-delay: 0.4s;
+        animation: slideInLeft 0.8s 0.4s forwards;
     }
     
     .fade-in-row {
         opacity: 0;
         transform: translateX(-20px);
-        animation: fadeInRow 0.5s forwards;
+        animation-fill-mode: forwards;
     }
     
-    .fade-in-row:nth-child(1) { animation-delay: 0.1s; }
-    .fade-in-row:nth-child(2) { animation-delay: 0.2s; }
-    .fade-in-row:nth-child(3) { animation-delay: 0.3s; }
-    .fade-in-row:nth-child(4) { animation-delay: 0.4s; }
+    .fade-in-row:nth-child(1) { 
+        animation: fadeInRow 0.5s 0.1s forwards; 
+    }
+    .fade-in-row:nth-child(2) { 
+        animation: fadeInRow 0.5s 0.2s forwards; 
+    }
+    .fade-in-row:nth-child(3) { 
+        animation: fadeInRow 0.5s 0.3s forwards; 
+    }
+    .fade-in-row:nth-child(4) { 
+        animation: fadeInRow 0.5s 0.4s forwards; 
+    }
     
     @keyframes fadeInUp {
         to {
@@ -387,7 +395,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = 'running';
+                // Check if animation hasn't already started
+                if (!entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    entry.target.style.animationPlayState = 'running';
+                }
             }
         });
     }, observerOptions);

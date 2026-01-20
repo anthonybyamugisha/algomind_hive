@@ -4,47 +4,47 @@
 
 {% block content %}
 <div class="container py-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1>Hive Observation & Data Entry</h1>
-        <button class="btn btn-primary" onclick="submitForm()">
+    <div class="d-flex justify-content-between align-items-center mb-4 fade-in-up">
+        <h1 class="display-4 fw-bold">Hive Observation & Data Entry</h1>
+        <button class="btn btn-primary btn-lg px-4 py-2 btn-hover-grow" onclick="submitForm()">
             <i class="fas fa-paper-plane"></i> Submit Observation
         </button>
     </div>
 
     <div class="row mb-4">
-        <div class="col-md-3">
-            <div class="card text-center bg-primary text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Total Hives</h5>
-                    <h3 class="display-4">24</h3>
-                    <p><small>Under Observation</small></p>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-1">
+            <div class="card text-center bg-primary text-white shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #4e73df, #2e59d9); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Total Hives</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">24</h3>
+                    <p class="mb-0"><small>Under Observation</small></p>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card text-center bg-success text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Active Today</h5>
-                    <h3 class="display-4">22</h3>
-                    <p><small>Reporting Data</small></p>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-2">
+            <div class="card text-center bg-success text-white shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #1cc88a, #13855c); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Active Today</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">22</h3>
+                    <p class="mb-0"><small>Reporting Data</small></p>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card text-center bg-info text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Avg Weight</h5>
-                    <h3 class="display-4">30.2kg</h3>
-                    <p><small>Per Hive</small></p>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-3">
+            <div class="card text-center bg-info text-white shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #36b9cc, #258391); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Avg Weight</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">30.2kg</h3>
+                    <p class="mb-0"><small>Per Hive</small></p>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card text-center bg-warning text-dark">
-                <div class="card-body">
-                    <h5 class="card-title">Avg Activity</h5>
-                    <h3 class="display-4">7.5/10</h3>
-                    <p><small>Foraging Level</small></p>
+        <div class="col-md-3 mb-4 mb-md-0 fade-in-up delay-4">
+            <div class="card text-center bg-warning text-dark shadow-sm dashboard-card h-100" style="background: linear-gradient(135deg, #f6c23e, #d6a22b); border: none;">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold">Avg Activity</h5>
+                    <h3 class="display-4 mb-3" style="font-size: 2.5rem;">7.5/10</h3>
+                    <p class="mb-0"><small>Foraging Level</small></p>
                 </div>
             </div>
         </div>
@@ -52,9 +52,9 @@
 
     <div class="row">
         <div class="col-lg-8">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Hive Data Entry Form</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-right delay-1">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Hive Data Entry Form</h6>
                 </div>
                 <div class="card-body">
                     <form id="hiveObservationForm">
@@ -171,25 +171,25 @@
         </div>
 
         <div class="col-lg-4">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Quick Tips</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-left delay-1">
+                <div class="card-header py-3 gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Quick Tips</h6>
                 </div>
                 <div class="card-body">
                     <div class="list-group list-group-flush">
-                        <div class="list-group-item">
+                        <div class="list-group-item fade-in-up">
                             <i class="fas fa-weight-hanging text-primary me-2"></i>
                             <strong>Weight Measurement:</strong> Weigh hives regularly to track honey production
                         </div>
-                        <div class="list-group-item">
+                        <div class="list-group-item fade-in-up delay-1">
                             <i class="fas fa-bee text-warning me-2"></i>
                             <strong>Foraging Activity:</strong> Observe entrance traffic during peak hours
                         </div>
-                        <div class="list-group-item">
+                        <div class="list-group-item fade-in-up delay-2">
                             <i class="fas fa-egg text-success me-2"></i>
                             <strong>Brood Pattern:</strong> Look for consistent egg-laying pattern
                         </div>
-                        <div class="list-group-item">
+                        <div class="list-group-item fade-in-up delay-3">
                             <i class="fas fa-ruler-combined text-info me-2"></i>
                             <strong>Consistency:</strong> Take measurements at same time daily
                         </div>
@@ -197,13 +197,13 @@
                 </div>
             </div>
 
-            <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Recent Observations</h6>
+            <div class="card shadow mb-4 dashboard-card slide-in-left delay-2">
+                <div class="card-header py-3 gradient-bg">
+                    <h6 class="m-0 font-weight-bold text-primary fs-5">Recent Observations</h6>
                 </div>
                 <div class="card-body">
                     <div class="list-group list-group-flush">
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action recommendation-item fade-in-up">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">HIVE-001</h6>
                                 <small class="text-muted">Today</small>
@@ -211,7 +211,7 @@
                             <p class="mb-1">Weight: 32.5kg | Activity: 8/10 | Brood: Present</p>
                             <small class="text-success">Healthy colony</small>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action recommendation-item fade-in-up delay-1">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">HIVE-003</h6>
                                 <small class="text-muted">Yesterday</small>
@@ -219,7 +219,7 @@
                             <p class="mb-1">Weight: 28.1kg | Activity: 6/10 | Brood: Limited</p>
                             <small class="text-warning">Monitor for swarming signs</small>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action recommendation-item fade-in-up delay-2">
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">HIVE-002</h6>
                                 <small class="text-muted">2 days ago</small>
@@ -234,44 +234,283 @@
     </div>
 </div>
 
+<style>
+    .dashboard-card {
+        transition: all 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .dashboard-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+    }
+    
+    .dashboard-card:hover::before {
+        left: 100%;
+    }
+    
+    .dashboard-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(135deg, #f8f9fc, #e4e6f0);
+        border: none;
+    }
+    
+    .stat-card {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+        transform: rotate(30deg);
+        pointer-events: none;
+    }
+    
+    /* Animation Classes */
+    .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        animation-fill-mode: forwards;
+    }
+    
+    .fade-in-up.delay-1 {
+        animation: fadeInUp 0.8s 0.2s forwards;
+    }
+    
+    .fade-in-up.delay-2 {
+        animation: fadeInUp 0.8s 0.4s forwards;
+    }
+    
+    .fade-in-up.delay-3 {
+        animation: fadeInUp 0.8s 0.6s forwards;
+    }
+    
+    .fade-in-up.delay-4 {
+        animation: fadeInUp 0.8s 0.8s forwards;
+    }
+    
+    .slide-in-right {
+        opacity: 0;
+        transform: translateX(50px);
+        animation-fill-mode: forwards;
+    }
+    
+    .slide-in-right.delay-1 {
+        animation: slideInRight 0.8s 0.2s forwards;
+    }
+    
+    .slide-in-right.delay-2 {
+        animation: slideInRight 0.8s 0.4s forwards;
+    }
+    
+    .slide-in-left {
+        opacity: 0;
+        transform: translateX(-50px);
+        animation-fill-mode: forwards;
+    }
+    
+    .slide-in-left.delay-1 {
+        animation: slideInLeft 0.8s 0.2s forwards;
+    }
+    
+    .slide-in-left.delay-2 {
+        animation: slideInLeft 0.8s 0.4s forwards;
+    }
+    
+    .fade-in-row {
+        opacity: 0;
+        transform: translateX(-20px);
+        animation-fill-mode: forwards;
+    }
+    
+    .fade-in-row:nth-child(1) { 
+        animation: fadeInRow 0.5s 0.1s forwards; 
+    }
+    .fade-in-row:nth-child(2) { 
+        animation: fadeInRow 0.5s 0.2s forwards; 
+    }
+    .fade-in-row:nth-child(3) { 
+        animation: fadeInRow 0.5s 0.3s forwards; 
+    }
+    .fade-in-row:nth-child(4) { 
+        animation: fadeInRow 0.5s 0.4s forwards; 
+    }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideInRight {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes fadeInRow {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .btn-hover-grow {
+        transition: all 0.3s ease;
+    }
+    
+    .btn-hover-grow:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .recommendation-item {
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .recommendation-item:hover {
+        background-color: #f8f9fc;
+        transform: translateX(5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .pulse-animation {
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+    }
+    
+    .glow-effect {
+        position: relative;
+    }
+    
+    .glow-effect::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400%;
+        border-radius: 14px;
+        z-index: -1;
+        animation: glowing-border 20s linear infinite;
+    }
+    
+    @keyframes glowing-border {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+    
+    .counter-animation {
+        animation: counterAnimation 2s ease-out;
+    }
+    
+    @keyframes counterAnimation {
+        0% { transform: scale(0.8); opacity: 0; }
+        70% { transform: scale(1.1); }
+        100% { transform: scale(1); opacity: 1; }
+    }
+</style>
+
 <script>
-document.getElementById('hiveObservationForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    submitForm();
-});
-
-function submitForm() {
-    // Collect form data
-    const formData = {
-        hiveId: document.getElementById('hiveId').value,
-        observationDate: document.getElementById('observationDate').value,
-        hiveWeight: document.getElementById('hiveWeight').value,
-        foragingActivity: document.getElementById('foragingActivity').value,
-        broodPresence: document.getElementById('broodPresence').value,
-        aggressiveness: document.getElementById('aggressiveness').value,
-        floweringNotes: document.getElementById('floweringNotes').value,
-        generalNotes: document.getElementById('generalNotes').value,
-        internalTemp: document.getElementById('internalTemp').value,
-        externalTemp: document.getElementById('externalTemp').value,
-        humidity: document.getElementById('humidity').value
+document.addEventListener('DOMContentLoaded', function() {
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     };
-    
-    // Simulate API call to Django backend
-    console.log('Submitting hive observation:', formData);
-    
-    // Show success message
-    alert('Hive observation submitted successfully! The AI will process this data and generate predictions.');
-    
-    // Reset form
-    clearForm();
-}
 
-function clearForm() {
-    document.getElementById('hiveObservationForm').reset();
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Check if animation hasn't already started
+                if (!entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    entry.target.style.animationPlayState = 'running';
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Observe animated elements
+    document.querySelectorAll('.fade-in-up, .slide-in-right, .slide-in-left, .fade-in-row').forEach(el => {
+        observer.observe(el);
+    });
+
+    document.getElementById('hiveObservationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        submitForm();
+    });
+
+    function submitForm() {
+        // Collect form data
+        const formData = {
+            hiveId: document.getElementById('hiveId').value,
+            observationDate: document.getElementById('observationDate').value,
+            hiveWeight: document.getElementById('hiveWeight').value,
+            foragingActivity: document.getElementById('foragingActivity').value,
+            broodPresence: document.getElementById('broodPresence').value,
+            aggressiveness: document.getElementById('aggressiveness').value,
+            floweringNotes: document.getElementById('floweringNotes').value,
+            generalNotes: document.getElementById('generalNotes').value,
+            internalTemp: document.getElementById('internalTemp').value,
+            externalTemp: document.getElementById('externalTemp').value,
+            humidity: document.getElementById('humidity').value
+        };
+        
+        // Simulate API call to Django backend
+        console.log('Submitting hive observation:', formData);
+        
+        // Show success message
+        alert('Hive observation submitted successfully! The AI will process this data and generate predictions.');
+        
+        // Reset form
+        clearForm();
+    }
+
+    function clearForm() {
+        document.getElementById('hiveObservationForm').reset();
+        document.getElementById('observationDate').value = new Date().toISOString().split('T')[0];
+    }
+
+    // Set today's date as default
     document.getElementById('observationDate').value = new Date().toISOString().split('T')[0];
-}
-
-// Set today's date as default
-document.getElementById('observationDate').value = new Date().toISOString().split('T')[0];
+});
 </script>
 {% endblock %}
