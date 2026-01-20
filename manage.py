@@ -6,7 +6,12 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'algomind_hive.settings')
+    # Check if deployment settings should be used
+    if os.environ.get('DEPLOYMENT_ENV') == 'azure':
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'algomind_hive.deployment_settings')
+    else:
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'algomind_hive.settings')
+    
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
