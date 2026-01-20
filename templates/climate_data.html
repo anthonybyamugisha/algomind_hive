@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+
+{% block title %}Climate Data - Algomind Hive{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Climate Intelligence</h1>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addClimateModal">
+            <i class="fas fa-plus"></i> Add Climate Data
+        </button>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Avg Temperature</h5>
+                    <h3 class="text-primary">22°C</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Rainfall</h5>
+                    <h3 class="text-success">12mm</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Humidity</h5>
+                    <h3 class="text-info">65%</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Nectar Flow</h5>
+                    <h3 class="text-warning">78%</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Climate Data Records</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Min Temp (°C)</th>
+                            <th>Max Temp (°C)</th>
+                            <th>Rainfall (mm)</th>
+                            <th>Humidity (%)</th>
+                            <th>Season</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023-06-15</td>
+                            <td>Apiary A</td>
+                            <td>18</td>
+                            <td>28</td>
+                            <td>5</td>
+                            <td>62</td>
+                            <td>Summer</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-14</td>
+                            <td>Apiary B</td>
+                            <td>16</td>
+                            <td>26</td>
+                            <td>2</td>
+                            <td>58</td>
+                            <td>Summer</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-13</td>
+                            <td>Apiary C</td>
+                            <td>20</td>
+                            <td>30</td>
+                            <td>0</td>
+                            <td>55</td>
+                            <td>Summer</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Climate Modal -->
+<div class="modal fade" id="addClimateModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Climate Data</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="climateForm">
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dateRecorded" class="form-label">Date Recorded</label>
+                        <input type="date" class="form-control" id="dateRecorded" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="tempMin" class="form-label">Min Temperature (°C)</label>
+                                <input type="number" class="form-control" id="tempMin" step="0.1" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="tempMax" class="form-label">Max Temperature (°C)</label>
+                                <input type="number" class="form-control" id="tempMax" step="0.1" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="rainfall" class="form-label">Rainfall (mm)</label>
+                                <input type="number" class="form-control" id="rainfall" step="0.1" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="humidity" class="form-label">Humidity (%)</label>
+                                <input type="number" class="form-control" id="humidity" step="0.1" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="seasonalTrend" class="form-label">Seasonal Trend</label>
+                        <select class="form-select" id="seasonalTrend" required>
+                            <option value="spring">Spring</option>
+                            <option value="summer" selected>Summer</option>
+                            <option value="autumn">Autumn</option>
+                            <option value="winter">Winter</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="submitClimateData()">Save Climate Data</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function submitClimateData() {
+    // This would typically make an API call to save the data
+    alert('Climate data saved successfully!');
+    document.getElementById('climateForm').reset();
+    const modal = bootstrap.Modal.getInstance(document.getElementById('addClimateModal'));
+    modal.hide();
+}
+</script>
+{% endblock %}
