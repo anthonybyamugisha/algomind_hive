@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="AI-powered beekeeping platform for smart hive monitoring, predictive analytics, and optimized honey production">
+    <meta name="theme-color" content="#d4af37">
     <title>{% block title %}ALGOMIND ORGANIC HONEY - AI-Powered Beekeeping{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -240,6 +242,147 @@
             background: linear-gradient(135deg, #fffdf7, #f9f7f0);
             border-left: 4px solid var(--secondary-color);
         }
+        
+        /* Mobile-specific optimizations */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.5rem !important;
+            }
+            
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.75rem;
+            }
+            
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .display-1, .display-2, .display-3 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            
+            .lead {
+                font-size: 1.1rem;
+            }
+            
+            .btn-lg {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .py-5 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .py-4 {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+            
+            .feature-card, .blog-card, .counter-stat {
+                margin-bottom: 1.5rem;
+            }
+            
+            .process-step {
+                margin-bottom: 2rem;
+            }
+            
+            .footer .row > div {
+                margin-bottom: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .display-1, .display-2, .display-3 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            
+            .d-flex.flex-column.flex-sm-row {
+                flex-direction: column;
+            }
+            
+            .navbar-brand {
+                font-size: 1.3rem !important;
+            }
+            
+            .navbar-brand i {
+                font-size: 1.5rem;
+                margin-right: 0.5rem !important;
+            }
+            
+            .py-5 {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+        }
+        
+        /* Desktop optimizations */
+        @media (min-width: 992px) {
+            .container-xl, .container-lg, .container-md, .container-sm, .container {
+                max-width: 1200px;
+            }
+        }
+        
+        /* Touch-friendly elements */
+        .touch-target {
+            min-height: 44px;
+            min-width: 44px;
+            padding: 10px;
+        }
+        
+        /* Smooth scrolling for better UX */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Focus indicators for accessibility */
+        a:focus, button:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        /* Improved form controls for mobile */
+        input, textarea, select {
+            font-size: 16px; /* Prevents zooming on iOS */
+        }
+        
+        /* Responsive typography */
+        h1, .h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+        h2, .h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+        h3, .h3 { font-size: clamp(1.3rem, 3vw, 1.75rem); }
+        h4, .h4 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
+        h5, .h5 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
+        p { font-size: clamp(0.9rem, 2vw, 1rem); }
+        
+        /* Improve body layout */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1;
+        }
+        
+        footer {
+            margin-top: auto;
+        }
     </style>
 </head>
 <body>
@@ -248,7 +391,7 @@
             <a class="navbar-brand fw-bold fs-3 text-white" href="{% url 'home' %}">
                 <i class="fas fa-honeycomb me-2"></i> ALGOMIND ORGANIC HONEY
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler touch-target" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -276,8 +419,10 @@
         </div>
     </nav>
 
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <footer class="text-center text-white" style="background-color: var(--dark-color);">
         <div class="container py-5">
