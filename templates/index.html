@@ -309,8 +309,37 @@
 </section>
 
 <style>
+    /* Enhanced Animations and Transitions */
+    
+    /* Floating animation for elements */
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+    
+    /* Pulse animation */
+    @keyframes pulse-glow {
+        0% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.4); }
+        50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+        100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.4); }
+    }
+    
+    /* Rotate animation */
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    
+    /* Staggered fade in */
+    @keyframes staggeredFadeIn {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    
     .honeycomb-pattern {
         position: relative;
+        animation: float 6s ease-in-out infinite;
     }
     
     .honeycomb-pattern::before {
@@ -327,6 +356,8 @@
             radial-gradient(circle at calc(100% - 10px) calc(100% - 10px), var(--primary-color) 2px, transparent 2px);
         background-size: 20px 20px;
         transform: rotate(45deg);
+        animation: rotate 20s linear infinite;
+        opacity: 0.15;
     }
     
     .text-gold {
@@ -335,11 +366,14 @@
     
     .feature-card {
         transition: all 0.3s ease;
+        animation: staggeredFadeIn 0.6s ease-out forwards;
+        opacity: 0;
     }
     
     .feature-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+        animation: pulse-glow 2s infinite;
     }
     
     .blog-card {
@@ -348,15 +382,20 @@
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border: none;
+        animation: staggeredFadeIn 0.6s ease-out forwards;
+        opacity: 0;
     }
     
     .blog-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        animation: pulse-glow 2s infinite;
     }
     
     .process-step {
         position: relative;
+        animation: staggeredFadeIn 0.5s ease-out forwards;
+        opacity: 0;
     }
     
     .process-step::after {
@@ -372,6 +411,24 @@
     
     .process-step:last-child::after {
         display: none;
+    }
+    
+    /* Enhanced counter animations */
+    .counter-stat {
+        animation: bounceIn 0.8s ease-out forwards;
+        opacity: 0;
+    }
+    
+    /* Button hover effects */
+    .btn-hover-grow:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    /* Glowing effect for important elements */
+    .glow-effect::after {
+        animation: pulse-glow 3s infinite;
     }
     
     /* Animation Classes */
@@ -506,8 +563,20 @@
         color: white;
     }
     
+    .accordion-button:hover {
+        background: linear-gradient(135deg, #e6d8a8, #d4af37) !important;
+    }
+    
+    .accordion-button:not(.collapsed):hover {
+        background: linear-gradient(135deg, #c49f27, #a8841f) !important;
+    }
+    
     .accordion-button:focus {
         box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+    }
+    
+    .accordion-item {
+        transition: all 0.3s ease;
     }
     
     .dashboard-card {
@@ -593,16 +662,17 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // Add animated class to trigger animation
-                entry.target.classList.add('animated');
-                // Ensure the element stays visible after animation
+                entry.target.style.animationPlayState = 'running';
                 entry.target.style.opacity = '1';
-                entry.target.style.transform = entry.target.style.transform || 'translateY(0)';
+                
+                // Add class to indicate animation has started
+                entry.target.classList.add('animated');
             }
         });
     }, observerOptions);
 
     // Observe animated elements
-    document.querySelectorAll('.fade-in-up, .slide-in-right, .slide-in-up').forEach(el => {
+    document.querySelectorAll('.fade-in-up, .slide-in-right, .slide-in-up, .feature-card, .blog-card, .counter-stat, .process-step, .accordion-item').forEach(el => {
         observer.observe(el);
     });
 
